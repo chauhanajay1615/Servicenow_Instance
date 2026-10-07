@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="DELETE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_2166443_info_t_0_travelbooking</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>ValidateDuplicateRecord</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+        var gr = new GlideRecord(current.getTableName());
+       // gr.addEncodedQuery('state=1^ORstate=2' + current.assigned_to);
+        gr.addQuery('assigned_to',current.assigned_to);
+		gr.addEncodedQuery('state=1^ORstate=2');
+		gr.addQuery('sys_id', '!=', current.sys_id);
+		gr.query();
+
+        if (gr.next()) {
+            gs.addErrorMessage('incident tickect is opened or working in progress please work on it')
+            current.setAbortAction(true);
+        }
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-04 05:47:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f834c036c3838b10a97ff54d0501317d</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>ValidateDuplicateRecord</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Info travel Booking" source="x_2166443_info_t_0">95ed2831c3c38310a97ff54d05013196</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_update_name>sys_script_f834c036c3838b10a97ff54d0501317d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-04 06:06:17</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="DELETE" query="documentkey=f834c036c3838b10a97ff54d0501317d"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</application>
+        <file_path/>
+        <instance_id>27120471eb952a9c3a48f459bad0cd4b</instance_id>
+        <instance_name>dev343148</instance_name>
+        <name>sys_script_f834c036c3838b10a97ff54d0501317d</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;false&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;true&lt;/action_insert&gt;&lt;action_query&gt;false&lt;/action_query&gt;&lt;action_update&gt;false&lt;/action_update&gt;&lt;active&gt;true&lt;/active&gt;&lt;add_message&gt;false&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;x_2166443_info_t_0_travelbooking&lt;/collection&gt;&lt;condition/&gt;&lt;description/&gt;&lt;execute_function&gt;false&lt;/execute_function&gt;&lt;filter_condition/&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message/&gt;&lt;name&gt;ValidateDuplicateRecord&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions/&gt;&lt;script&gt;&lt;![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+        var gr = new GlideRecord(current.getTableName());
+       // gr.addEncodedQuery('state=1^ORstate=2' + current.assigned_to);
+        gr.addQuery('assigned_to',current.assigned_to);
+		gr.addEncodedQuery('state=1^ORstate=2');
+		gr.addQuery('sys_id', '!=', current.sys_id);
+		gr.query();
+
+        if (gr.next()) {
+            gs.addErrorMessage('incident tickect is opened or working in progress please work on it')
+            current.setAbortAction(true);
+        }
+
+})(current, previous);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-04 05:47:00&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;f834c036c3838b10a97ff54d0501317d&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_name&gt;ValidateDuplicateRecord&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Info travel Booking" source="x_2166443_info_t_0"&gt;95ed2831c3c38310a97ff54d05013196&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Info travel Booking"&gt;95ed2831c3c38310a97ff54d05013196&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_f834c036c3838b10a97ff54d0501317d&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-04 06:06:17&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;before&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=f834c036c3838b10a97ff54d0501317d"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-965258310</payload_hash>
+        <record_name>ValidateDuplicateRecord</record_name>
+        <reverted_from/>
+        <source>51ed6831c3c38310a97ff54d0501317d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-04 06:06:18</sys_created_on>
+        <sys_id>5cb9c4bec3838b10a97ff54d050131f4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a06b066be30000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-04 06:06:18</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>d4b9c4bed7838b108a15c55ab72cb7f3</update_guid>
+        <update_guid_history>d4b9c4bed7838b108a15c55ab72cb7f3:-965258310,e9a8c0fec7838b10fdc3862f8c19fe48:1684062977,1e9840fe8f838b101faf3cbaca1d24bc:1120702256,df3800be72838b10b7ad5fc4af917abb:-655345498,d97608ba02838b108ce5ae76a5ebd525:-980714852,5f16c87aa1838b108775bf4104e4ef93:-1328641957,bd45003a87838b1022ce8246f58b8faa:-980714852</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-04 06:07:06</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>899be2dda09947709e5c59ba48e4f604</sys_id>
+        <sys_metadata>f834c036c3838b10a97ff54d0501317d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ValidateDuplicateRecord</sys_name>
+        <sys_package display_value="Info travel Booking" source="x_2166443_info_t_0">95ed2831c3c38310a97ff54d05013196</sys_package>
+        <sys_parent display_value="TravelBooking">5cceac39c3c38310a97ff54d05013199</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_scope_delete display_value="">09a56171965d4def8145cb14d7f3e969</sys_scope_delete>
+        <sys_update_name>sys_script_f834c036c3838b10a97ff54d0501317d</sys_update_name>
+        <sys_update_version display_value="sys_script_f834c036c3838b10a97ff54d0501317d">5cb9c4bec3838b10a97ff54d050131f4</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-04 06:07:06</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

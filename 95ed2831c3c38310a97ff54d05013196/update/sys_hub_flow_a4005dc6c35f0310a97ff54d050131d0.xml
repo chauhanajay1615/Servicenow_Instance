@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <attributes>labelCacheCleanUpExecuted=true</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>trip_feedback_request_notification</internal_name>
+        <label_cache>[{"name":"f0db9828-2d9e-4f77-9b6a-5c490a78ab8b.item","label":"2➛TravelBooking Record","reference":"x_2166443_info_t_0_travelbooking","reference_display":"TravelBooking Record","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":{"pills_draggable_outside_block":"false","pills_draggable_inside_block":"true"}},{"name":"08f3f9ce-e789-4a75-8d06-02b2f132b995.Records","label":"1➛TravelBooking Records","reference":"x_2166443_info_t_0_travelbooking","reference_display":"TravelBooking Records","type":"records","base_type":"records","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <master_snapshot_digest/>
+        <name>Trip Feedback Request Notification</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 13:33:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a4005dc6c35f0310a97ff54d050131d0</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>Trip Feedback Request Notification</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Info travel Booking" source="x_2166443_info_t_0">95ed2831c3c38310a97ff54d05013196</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_update_name>sys_hub_flow_a4005dc6c35f0310a97ff54d050131d0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 14:36:04</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>d73e5d46c3df0310a97ff54d0501312e</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=a4005dc6c35f0310a97ff54d050131d0"/>
+    <sys_variable_value action="delete_multiple" query="document_key=a4005dc6c35f0310a97ff54d050131d0"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=a4005dc6c35f0310a97ff54d050131d0"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=a4005dc6c35f0310a97ff54d050131d0^sys_idNOT INec005dc6c35f0310a97ff54d050131d0"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>a4005dc6c35f0310a97ff54d050131d0</id>
+        <name>Trip Feedback Request Notification</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 13:33:46</sys_created_on>
+        <sys_id>ec005dc6c35f0310a97ff54d050131d0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 13:33:46</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=ec005dc6c35f0310a97ff54d050131d0"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=a4005dc6c35f0310a97ff54d050131d0"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=a4005dc6c35f0310a97ff54d050131d0"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a4005dc6c35f0310a97ff54d050131d0"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=a4005dc6c35f0310a97ff54d050131d0^sys_idNOT INa501998ac35f0310a97ff54d0501310c"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Trip Feedback Request Notification">a4005dc6c35f0310a97ff54d050131d0</flow>
+        <generation_source/>
+        <name>Daily</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 13:38:12</sys_created_on>
+        <sys_id>a501998ac35f0310a97ff54d0501310c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 13:38:12</sys_updated_on>
+        <trigger_definition display_value="Daily">89142dc0c32222002841b63b12d3ae8a</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/31SXU/cMBD8K5Wf0yi5g37kDYGQKkGReideEIo28ebOqr9qOwfpif/edZwEjlaN/OLZ3dmZcR6OTEKDklVsKxSyjAkd0GmQ28EioTspONYh1RRoDsG4gVXB9Zixzhm1RWUlBGruQHoCjePoWFUWRcYOIHvcDP4bJy5i0KAi68Q3Vulafv1cfCxKOh9WRVXEQ1UuPBEP9/9tavdCcoeaVQ+PGbPgaEGI64+Lkxuhf6btp80ialoDP0PeFu16RV9RrL6clc2ndVOu+BoQz2nqXUCnFsI/YorYzenQ20zwOaDmyJfA/orVIfA7LYelY09ekgUFz178xonKYYfkp8VUXK71lF2CuysIsCHqNvQO5yiMaNGnJDh20Mtw+RZLDXc2CKPTSIBGztNG9kp/T0mwhWB+KkJ6TyLQRqNR+uSj2+zN049Z5bXQYypTUZoW5HKDEJxo+hD1HBlKVERUK7BW6F1tnTmIcZi0qHyMP++keaKlXux0Dm0UnlOukF8TfjXC9+BEdHFLNDT8kjE/+EsJ3r96oRDrX31UkpxNHuoUQxxpnbDhghYc5p/+5fEPSQ7kUEkDAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>daily</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=a4005dc6c35f0310a97ff54d050131d0^sys_idNOT IN3798198ac39f0310a97ff54d0501310b,c021d9c6c35f0310a97ff54d050131c5"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Notification">0d8dd9f10f11101051218e8ebc767e27</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Trip Feedback Request Notification">a4005dc6c35f0310a97ff54d050131d0</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>f0db9828-2d9e-4f77-9b6a-5c490a78ab8b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 14:11:24</sys_created_on>
+        <sys_id>3798198ac39f0310a97ff54d0501310b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 14:11:36</sys_updated_on>
+        <ui_id>86d1ce98-201a-4b66-867a-0a2ece2a83b0</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VVXW/bOgz9K4Ge40C249jO27aiwIDdDli7vQyDQElUI0z+mC1nzQ363yfZbhqnH3cd1of7KIoUDw95qK97oiVZk2WYSZmrkKowDGlIkzAKM8yQi3SVYpyROSmhQOdZVlYrLcDqqnTWLZjOm9EFJzlFESeKxiGFPFUqWUqa0DAOgTtXqdvawO7LGHHV6Hp2jig5iO+zT/ijw9bOLqbPi402ssGSrL9+m5MaGgfCYkPW+5Or363CAEfjXE/yPF6c3dXe2qBCl0jgaPowvvHpyF410sOK5wRvLJYSHR4FpsU5KaCUYKtmR9a26ZyhQZAfS7M7eGx0ad17xPvetPpflzSO5kd516TdtbjF0jIsQBsGYoR48GEjvQ9rU2dg4dKlFrZrcMgjNpUW2A7cSVTQGfvu2DY4fKz7N/oQC9w8h0RUpivKi4FIUAqFRcmURiNZVbI+hhyS3U2Bs3StA4+1J83TMHCkLjfVzwPB57rs6R35MpUAczipS4RGbM59Jt9Dj2BOwNpG8876gvbTxq6Jz+Ez66sn2okGC19jAXWty2tWN9VW9xBcncXi2rjDQpnqp0Pe6utyMdCwcI2Gxbmzn/XmL9BoT9s/7hkXfJfxZKZatGykhfkHmKqaAvxE9BX2YZ9L7QTyvp/yPMQ0jrIgX0UiWGKcBFzGcRCGXCACqkiG5HbuG/XOQNuOLRmGhf3oPHWk78TIORs48UBZz54PFk6e9o2raosj07fzu2Uhn5NZdLQsGhROGEdrYr9XVPI8c+gjmWOwVGka5HwFQSKWOYU0A57xhbZY3N4+3Bkv3wj/DdUc2j9iPcU+bgFZia6fCS1P9sDZeDN7f3a/CcLnN8Fo+ZNV8ITq/77ST0X9Kuqd6nSqyCmxr67JaYcnmpMhTeOciiCNkjhYUgEBzyQPgEful1uushV/Xc1lz39t0f3cHr15r7sbFoWr1XIZM12qillGmW1gi4ZX1XdH5mPfs79+e7h+me5+A+6d7q76aXsc/ii9B7YPx7Gzi+FiFF70QuENE/uI7jL6P9Ld4S/8K8Kb8Prqupu0dyI7wTlXHPPAfW3uq0sxC7II0gATKmIVxZSm6g9k95TYvv0CKf7OgQ8LAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3798198ac39f0310a97ff54d0501310b"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Trip Feedback Request Notification">a4005dc6c35f0310a97ff54d050131d0</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 13:38:39</sys_created_on>
+        <sys_id>c021d9c6c35f0310a97ff54d050131c5</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 13:40:59</sys_updated_on>
+        <ui_id>08f3f9ce-e789-4a75-8d06-02b2f132b995</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VWTU/jMBD9K1XOVeWQUlhOsAUkpLJIUPXCspaTOK2FG2dtpx9U/PcdO1/dNpQW5dDVnqLMjD1vZt6z/bxyWOhcOCjqIkTc0/MzhDwPoV7PC4jr+14v8JF/+s1pOzGZUohUQmqslwkF04zwtLQRFYApZCrhZDnKPaSlResN7MGE8VDS2Ll4fmk7CZGwm6bSuVhtuPaFw4lPOYQ+Qe7WMMNTA9F+LiCHYEHxP8iX9gujkKGB4rUdutA0DilgiAhXtO1MSRwSLeSytEhKwoeYV4YJizXs5pjghWJvkM87MXERhaoCmvnKX5y3KDNH10STJy3TQKcyD83AKujHqiyzbGRNz3P46L1dxb+ZeLIZH9L1Be479DukEUm57n8tp3tozhOTMyvwIdFMwNQdz8yF+LwoX/B0Gv/IZumUCEc1ZMs81x9wLlXQbJqYgZoJ5eOKniZi/lhM45bFFlfu5CIgvPwjWkvmp9r0ZeVEIY4Y5SFmMWexyQRjM/ShnE4hA56SJGHxGCdSzJjdFWqZdsYcfjoRF3PTCzaOOyQwlXeAWKRzC/Zrax4RyUwX7mEbWNw2CSewNM+HVSBZovGchWOqq+xFVCj0nPDXOn/OOFwMypbnvLcdtVR9TpSqmg00xb9T04Os9Xn3sB2UXWJRXEEFM5o3ynDAyjY42ynb0w2JZoNe48v2+XHwybEHhKILD4aRLX/5Ear86MhmbiP+Pj5ujaP1I3MU9G7sCDlHzRwhdRLfluBBCtyWlqHav6Osw4mf9eYT9nd3Xlo9t+IZDBlLqqClao39LkJoWwFuOzMfJoM9sBQyuCeL1mMJphZhrgQgKR3bk2ldBnelNddAtzENdI9XA8Wwam+gYmYNX0DHoobPhHC++/WGKpoFIg6ZwbiuA6WJ1ICZPt4MroZ3o5vB8DIkSxHNKX29JGNx6f2CGE1/prB/6G1r5gs7HCavPSos5NVfL7Gu7OKFumkb1G1QPLsalBg6XpE1ftEci4L2uk92k6zrV3zKtqsUtMAnbq/X7XpwoUYCa4ywlmRGuS/EK9S9rZihdX8v3U3KwSIt5DDMoW4gz0Vgf+veWnbZxlsL/Z9vreO8RQAQ48AQnI1QiVTaVs5wwFNlHZLEKturwTvn5Q93O3uTwhAAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c021d9c6c35f0310a97ff54d050131c5"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=a4005dc6c35f0310a97ff54d050131d0"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=a4005dc6c35f0310a97ff54d050131d0^sys_idNOT IN77a1ddcac35f0310a97ff54d050131ce"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">ffa1ddcac35f0310a97ff54d050131cd</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Trip Feedback Request Notification">a4005dc6c35f0310a97ff54d050131d0</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 13:41:06</sys_created_on>
+        <sys_id>77a1ddcac35f0310a97ff54d050131ce</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 14:35:54</sys_updated_on>
+        <ui_id>f0db9828-2d9e-4f77-9b6a-5c490a78ab8b</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51TTW+jMBD9Lz4TxEebhtyqVpUq7W6ltOplVaHBHhJrjc3aJimL+O87DoRWPa32BPPm673HMDDT+bbz7sXcOif3mm1/vkVM6oDR+8CkYFuWFqIu0qTgebbOsyTJNldptc6rNBM5oFiziGlokCqlx8ZReATVhXgYkk2d1wXHFd5sitUV3FyvNiJZr5Ksyuo0z6qiuI53yI0VbhypVUjXKuhf/38CP0glLM5iWrDEzaNl2+FL6l/FKahQUenjrO6LWN+3IbQThRn4NvfsFpQegUSWRAzfPWqBtL4G5TBiDWgB3tiebb3tCLAI4kmrfqk4SO1pHAu1707+oY1pkoTCGkkQxym5hOXs4wTX9+DhmUZz39m5lB+M5OgmKwTW0Cl/9xmbCp5aL42eWjxU6tJtVNfoH5MTbBlw+WyEdI5IYBuEBuqzjvr5YE67C8sHqc+mzEllOKglAu+trDof+AwMFTY0qGygbaXel601R3luJi5NvFcUxLUyJ1oaTjkGHojH5CvED4Tfn+FXsDKo+E5jqHmMmOvdnQLnPrSQieXvLjCZlM0aysmG0MKtbP0tLTjiTHd8C1c/zV485dIRhZeAPV7+qZDo6YIk/wydjP0VyH9g4192SEZrnQMAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=a4005dc6c35f0310a97ff54d050131d0"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=a4005dc6c35f0310a97ff54d050131d0"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_a4005dc6c35f0310a97ff54d050131d0"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_a4005dc6c35f0310a97ff54d050131d0"/>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=a4005dc6c35f0310a97ff54d050131d0"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=a4005dc6c35f0310a97ff54d050131d0"/>
+</record_update>

@@ -1,0 +1,1679 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=12160000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>travel_cancellation_notification</internal_name>
+        <label_cache>[{"name":"Created_1.current","label":"Trigger - Record Created➛TravelBooking Record","reference":"x_2166443_info_t_0_travelbooking","reference_display":"TravelBooking","type":"reference","base_type":"reference","usedInstances":{"e991ed93-125b-42c0-af59-acafc40cefa5":["record"],"e66331b6-d57c-4e7e-9df0-6a45ff365b5f":["record"],"5660b06b-f0d6-4583-ad5e-aa1a58c22b56":["record"],"151f0709-86cf-4997-9d49-498fba842cb4":["record"],"f8f89165-e296-47c3-8f3f-b24a3482bbc6":["record"],"580f6b36-49ea-4355-81e5-ca71e234e58d":["record"],"4f902b28-9359-4cf5-af34-0a1033f31733":["record"]},"attributes":{}},{"name":"Created_1.current.assigned_to.manager","label":"Trigger - Record Created➛TravelBooking Record➛Assigned to➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager","choices":[{"order":0.0}],"usedInstances":{}},{"name":"e66331b6-d57c-4e7e-9df0-6a45ff365b5f.approval_state","label":"13 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.travel_type","label":"Trigger - Record Created➛TravelBooking Record➛Travel Type","reference":"","reference_display":"Travel Type","type":"choice","base_type":"choice","parent_table_name":"x_2166443_info_t_0_travelbooking","column_name":"travel_type","choices":[{"label":"-- None --","used":false,"image":"","reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"used":false,"image":"","label":"International","reference":false,"rawLabel":"International","selected":false,"missing":false,"value":"international","parameters":{"name":"x_2166443_info_t_0_travelbooking","dependent_values":[""]}},{"used":false,"image":"","label":"Domestic","reference":false,"rawLabel":"Domestic","selected":false,"missing":false,"value":"domestic","parameters":{"name":"x_2166443_info_t_0_travelbooking","dependent_values":[""]}}],"usedInstances":{"3ac7d338-0301-4042-b72e-9ece327a8506":["condition"],"826f7dbf-f299-4cbb-b428-76981f55c94c":["condition"]}},{"name":"e991ed93-125b-42c0-af59-acafc40cefa5.approval_state","label":"4 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.assignment_group.manager","label":"Trigger - Record Created➛TravelBooking Record➛Assignment group➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user_group","column_name":"manager","usedInstances":{"e991ed93-125b-42c0-af59-acafc40cefa5":["approval_conditions"],"e66331b6-d57c-4e7e-9df0-6a45ff365b5f":["approval_conditions"]}}]</label_cache>
+        <master_snapshot>fd344dcec3db0310a97ff54d050131d6</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Travel_Cancellation_Notification</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>92348dcec3db0310a97ff54d0501316c</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 09:19:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f0d5d042c3970310a97ff54d050131c4</sys_id>
+        <sys_mod_count>57</sys_mod_count>
+        <sys_name>Travel_Cancellation_Notification</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Info travel Booking" source="x_2166443_info_t_0">95ed2831c3c38310a97ff54d05013196</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_update_name>sys_hub_flow_f0d5d042c3970310a97ff54d050131c4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:17</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>3234cdcec3db0310a97ff54d05013100</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=f0d5d042c3970310a97ff54d050131c4"/>
+    <sys_variable_value action="delete_multiple" query="document_key=f0d5d042c3970310a97ff54d050131c4"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_2166443_info_t_0_travelbooking">travel_type=domestic^ORtravel_type=international<item display_value="Domestic" endquery="false" field="travel_type" goto="false" newquery="false" operator="=" or="false" value="domestic"/>
+            <item display_value="International" endquery="false" field="travel_type" goto="false" newquery="false" operator="=" or="true" value="international"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>92348dcec3db0310a97ff54d0501316c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:16</sys_updated_on>
+        <table>x_2166443_info_t_0_travelbooking</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>f0d5d042c3970310a97ff54d050131c4</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:16</sys_created_on>
+        <sys_id>5e348dcec3db0310a97ff54d0501316d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:16</sys_updated_on>
+        <trigger display_value="">92348dcec3db0310a97ff54d0501316c</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=f0d5d042c3970310a97ff54d050131c4^sys_idNOT IN5e348dcec3db0310a97ff54d0501316d"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=f0d5d042c3970310a97ff54d050131c4"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=f0d5d042c3970310a97ff54d050131c4^sys_idNOT IN38d5d042c3970310a97ff54d050131c8"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>f0d5d042c3970310a97ff54d050131c4</id>
+        <name>Travel_Cancellation_Notification</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 09:19:34</sys_created_on>
+        <sys_id>38d5d042c3970310a97ff54d050131c8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 09:19:34</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=38d5d042c3970310a97ff54d050131c8"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=f0d5d042c3970310a97ff54d050131c4^sys_idNOT IN1806d842c3970310a97ff54d05013190,a006d842c3970310a97ff54d050131e8"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Travel_Cancellation_Notification">f0d5d042c3970310a97ff54d050131c4</model>
+        <model_id>f0d5d042c3970310a97ff54d050131c4</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_f0d5d042c3970310a97ff54d050131c4</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 09:20:21</sys_created_on>
+        <sys_id>1806d842c3970310a97ff54d05013190</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:13</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1806d842c3970310a97ff54d05013190"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Travel_Cancellation_Notification">f0d5d042c3970310a97ff54d050131c4</model>
+        <model_id>f0d5d042c3970310a97ff54d050131c4</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_f0d5d042c3970310a97ff54d050131c4</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 09:20:21</sys_created_on>
+        <sys_id>a006d842c3970310a97ff54d050131e8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:14</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a006d842c3970310a97ff54d050131e8"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=f0d5d042c3970310a97ff54d050131c4"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f0d5d042c3970310a97ff54d050131c4"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=f0d5d042c3970310a97ff54d050131c4^sys_idNOT IN0006d842c3970310a97ff54d05013189"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">f0d5d042c3970310a97ff54d050131c4</flow>
+        <generation_source/>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 09:20:20</sys_created_on>
+        <sys_id>0006d842c3970310a97ff54d05013189</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:14</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY2W7jNhT9FUFPHcAFtHjN24yTQQOkCWB7pg9pRqBE0iaGJl2JUuIO8u8ltVnW4niRU+fJMEnznnt47rmkH3/pFLiI6lf6DLgU6R2dMIF8BuhsvUJyWKhhh4GlmlsCBoHg/lq/En6IOjr2+XKGlisKhFyMAQ3kIPch8vUrs6NHgIZoug5uodxJ/j7eJt1TT6fl9xfHMvv9btd2CMPcEY7hCB9EiLqc/yRsLpdCEsgg6+/pL2bx9Jd82lsQCn3E9KvHp46+Ar4MJBSIX6UpIbNytlLW7pPciMLoYQ+MLGR4tmlblmFYw67p9m3XtKANkGHIdWW+SjmJGto2hKAXgRhEMOeqwqiPAHxgdJ2vWMgDSdhbgpeA/Ct3HxpqHUYyKw8lc/lXJ2UqGfYWnHjoYSUIZ8lIgjOZ5DRcsvsEv+IYYRBSkXEsR8JA7odWCrICkSLC0wV/nmQBvxIWZ5dOUu4Bmn8DQvjEDQUK1FFgQuWhOAk3AQ/9GP3kZvwwuXb++jwb/3EzcSY309nkdjy7udZf47ycf0K1Y4IwxeIk6bzmwvhKEFUHyMKlK9F09MDzyUp89gSJMmW+djZqH3MGScxKRfFeNhVsKz7LfpfkDaNR9F4hYib8ROWO0szfoWHYEPIlCgTxfjxMKnMpTLWF5KNSEkdXwbiYb1wF/T4AEIGGKnBxoQqKPNYkKmooLXK1qx7SkX0KomsY/1NJpDZ4bEU8AyYCR3AHQOgUWFLSCGPH5RDR6008OU7mc1lEhK1CEbxZIklu1Tp5u0L8kMktnPyEqnUSE5kzekcCie9RVvn3XN1xCvgu3XESMo0zzQt9SZPQ5Elr2e5ajFOpA98uwTzlGk8RRZ4oyAN/C4rf/iRBoBrABn0ePB6pRqfrIoTMtE8J+tSmSVRJj0r5tFb12enFFW+aGLsIW8ZA1btp2C42jYHRAxjahuFZhYqvQmzELkpCOUvlH1b3QSxRuocmysSn4I1ijeyl6Gi7HDISlHBSexm3A81sCZqloJVs0j7IJ3OxJsPX25rdlVrLNw4AIyB/AbMc97lR7OGLmPJn6cBHeCLmPpr7PGSw7E1qT43Iz60VLbmhC7yfu8NuVmi/pcf26dKccUN7JlzA1mfzRBub7gh1kSGt0JYu6PZGI9cDFsaD/gBZZskTN+BqEX8IL3xDDFGdmpp8sVbPUV0ZHOCIJwCsuOPBAE/3xVSuta6YzH0M/3teIOZIqL5DlcNVbHBOCUTZXLseUAkdbaq+LR+4S5NS0fFw5PXMwcAbyHeQdAHcRS4wu1YPjAZ9e9gruUAF3i7oooatd3kdBesgBtLgEN+Sqcv68+CcUg6QEMkfSYf283g9SAIUOqs6Ei02Ge5rik7tdrNQmyLZJ+P3cWv9nYtFpbPL0F/k+FZodQ+85+z3Gjhtvr6YfAjsQ00DlEu7eJREEm2zfqYnGeoOeyNs1xsPHtUZzwZiM/iLv4jsKZCoUWp1N5J9CzKqrevGK8QRJVYST/FusePy0xYpZuukWOcjxT75wpVVaOM79BiwH6ixxbeN47sbZ8jhuNa9CdbSvyIR1Ny1JhZIkknlnVqG0lTcNvtJcjmutDc5rKX3mPY6l6K5nPY11+SE5r9L4udpXyUpvMcLGsEB6PXshrvzqPyCroP5RhYX38wOFk5Up8OdHe2wfct71va0Ql1t62TPbtVq1vUt67Ssa5vWW1mf3o52vf9rUFxoo3n6DwOB2Hk2IAAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=f0d5d042c3970310a97ff54d050131c4^sys_idNOT IN30a69c82c3170310a97ff54d05013149,a3a3098ec3db0310a97ff54d0501313b,aed3cd8ec3db0310a97ff54d0501310d,c487dc06c3970310a97ff54d0501312d,ce03814ec3db0310a97ff54d050131af,e713454ec3db0310a97ff54d05013140"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">f0d5d042c3970310a97ff54d050131c4</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>826f7dbf-f299-4cbb-b428-76981f55c94c</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 09:23:06</sys_created_on>
+        <sys_id>30a69c82c3170310a97ff54d05013149</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:43:26</sys_updated_on>
+        <ui_id>e991ed93-125b-42c0-af59-acafc40cefa5</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1YbU/bPBT9K8ifSx+naULKN0aFtOl5NgnYvlAUubbTenOdLIkZfar+993EzstS6NpRJJj4gvC9fjn3+Jzazs0KCYZOER/6rgd/TiIXOwMHB9wPAjrChAa+7w1d1EOKLDj0JEmSxndEhiknWawgAQ1dZOBfJrJEkuWXJkLnQrKUK3R6c9tDCUlhlpyn6HTVSe0KQ5Ipl9D1zOI4uqxwPAowXyZFIstToWa2/a+d5qoKxikrYA16iN/nXDEOeCIiM95DC6IYyeN0WUdgavZJySYwFyo3BS/IfSb+h/UcHxcdIw4lUstG3QwtUyYcjUlOAImmuU5r4mJBeWbIYTwiWubn7Zjp8CnJBRRZDsnJVFajY6kX6qNhBNUTtDZGZwCCJ0WlBXRbR3Q1j39cVigvhCpJsUkZUyLrFsmBuqnOCzwrpMV1h2UT2eCZS76AFcMF7BNEwmKzRLkKgF70ZxIa/UjGPwBdJmaqT2hRYR92gPQvID4uw19IKopy/4NpYHCx3Gclvmv+vtCRP5j6IxywYxbh6fEwcL1jQjk+5r7jcY/51HNctO6hbJmdS5JlDVGwQ+F3XZRpaLMEhYbjYghNRZKfAag7brlY96yLsBMN+Gg0wFMHYxfjwKM4cPnUPfFPXMKCB0QaCS5Zy0RVYtNMrcx+ptoB1YapLiysx+BaS5XNsOz0q63K8UcfTeLg1gowfk3egsWfYq3nccz+6jcU/MYCdKvYeOsg+RrrVG1xQDgXWamMR53Q6rGfI3YAWTnig0HZNUQX/J/4wX3zw9/vh5Ngm9QobiSVcgrCaBlhtTqHzc85C50+1SnQlK/XB7hk7QCpUv9lhamL0eqdxVSXeyFYR/Bjmzl6P24Uj7cr3uhiF8G7gze5v0i5U2+btqJRIyWmgSRQd1vwE2SwT9DpBKlY8QnqTVDRKyy0VYahByCsE2VstVqvTUSnxE7gtJrNaEaWWdkzo3POtDTRXyJhKX4bP4TfduCk8ttY86OxIWWTpuoZU+E0vIiNs+bKdihn+udatM8c72BnzvA1nThPfd0836MlrK/14DD4oXiGV8lwq/54S2z1xYrGiomigqxlT/M44NmZWn6+eeBw6gNkKLIkapbGOumDssiMp+v17aaNnjjbfhbcgYL6yAPnZL+jxFqx+dRgB7Vt2HygsElrweGhDsFXdut7mR48vN2mdOv1ijbaMmw2BrsPB47vD4duKFQUh3mIwzwld1xO4/ib+XrSMdF1mX5Xp/dzxQ5IK1dcW6gd5NYHZfOhZ085rPPscfY8gowhHtT/m/pfjPpvfwLowswHShYAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=30a69c82c3170310a97ff54d05013149"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Notification">0d8dd9f10f11101051218e8ebc767e27</action_type>
+        <action_type_parent display_value="Send Notification">7eda5d710f11101051218e8ebc767ec1</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>0d8dd9f10f11101051218e8ebc767e27</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">f0d5d042c3970310a97ff54d050131c4</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>f90eca3a-8886-42f6-9967-9818f88f5106</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:39:54</sys_created_on>
+        <sys_id>a3a3098ec3db0310a97ff54d0501313b</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:43:26</sys_updated_on>
+        <ui_id>580f6b36-49ea-4355-81e5-ca71e234e58d</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9WWXU/cOhCG/0qV680qTrKbLHctCKlSD5WA9gZV1sQeg1Xno46zhbPiv3ecZL9goaU9HKmXnvHYM+/ME+dqFWgZHAWpzKVcKBYpxljEohmLWY45FiKbZxjnwSSooETaaVHUVtJ6CabzhtXq2CI4lJxNRWctVu7+nvxSt42Bu8/jNrKIG20k+YOjqy+ToAFLJzq0wdHqgetXUzJQoKGt5+ucHubo7hq/lrXoSsqL67Xxwxh5MnrevD8hDwX5dNgkwFuHlUTKQ4FpcRKUUElwtb3bWKho+bEyW8ONrtxQaAm3rf6Xbk5iv08hVSZGETZLPgo0mNUJOLhwthOusxu9ai2wHTSRqKAz7njXNmz42DhdV0OIg8Kso2vTldXZoEiwOWCnH11LSWDjC/WZ0+VUhbq4qb+fr5M81VUvyViiqQWYzQqcs7ronE9nFXT68pDag/mw3miw31hC0+jqmje2Xur+Psq+nF4bWkyVqb9Tmq2+rqYgfKlT6gRMT8l+0ps/g9W+7n/oGAr2d36q9LcO3/s5kizKkkUkwiyeJWEaCQiLXBYhFLGapek8nxcsuJ8E7V17bKBtt4pRq/i3zhc86DcqxXuxe6V5P3A+WFjduLeU3hJHfe4nI1s5e26Qk3g7tztnbvm65TGbz9M04bpSNXc84s7CEk1R119JtceoXfbudxv3y7j7hXTX3F3203Y4/RG9R7YPu7FvzgbHCF78QvCGiT3AXR79RdyNZf05eHta73O3p/b/gp0oikIVuAhZIUSYZpiHeQxZiLNIJCpOoihTv4Hdz2BLn5/enYesqp1WWkDfxC1uCzVPciZikSyyKGERLDJF3wkZzSKWsBSewo0fA7XNmP48frZzOH/beIXx5S/gz2tZk3i2X8zhEkckt2DsE3m+Yx+BTJ4HcuDvdx5C6joufVOxBG34MGBPUPqgtv+Y2Kcy2cMYlELhf3GURiNpEnkf8yqvqrpAsOLm1N/kezgwu4/8XmMJfLrjEfK77Xw94i8fz1SLjo+ycH8AV7UtwU9EX+HDD0W6YJglcR4u5jF9KDCZhYVMkpDRhwMRUMXydd7nLz8AAcyMMP0KAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a3a3098ec3db0310a97ff54d0501313b"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Notification">0d8dd9f10f11101051218e8ebc767e27</action_type>
+        <action_type_parent display_value="Send Notification">7eda5d710f11101051218e8ebc767ec1</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>0d8dd9f10f11101051218e8ebc767e27</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">f0d5d042c3970310a97ff54d050131c4</flow>
+        <generation_source/>
+        <order>15</order>
+        <parent_ui_id>069f9300-eeb8-4267-b29a-417bd8bce4b1</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:40:39</sys_created_on>
+        <sys_id>aed3cd8ec3db0310a97ff54d0501310d</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:43:26</sys_updated_on>
+        <ui_id>4f902b28-9359-4cf5-af34-0a1033f31733</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9WWXU/cOhCG/0qV680qTrKbLHctCKlSD5WA9gZV1sQeg1Xno46zhbPiv3ecZL9goaU9HKmXnvHYM+/ME+dqFWgZHAWpzKVcKBYpxljEohmLWY45FiKbZxjnwSSooETaaVHUVtJ6CabzhtXq2CI4lJxNRWctVu7+nvxSt42Bu8/jNrKIG20k+YOjqy+ToAFLJzq0wdHqgetXUzJQoKGt5+ucHubo7hq/lrXoSsqL67Xxwxh5MnrevD8hDwX5dNgkwFuHlUTKQ4FpcRKUUElwtb3bWKho+bEyW8ONrtxQaAm3rf6Xbk5iv08hVSZGETZLPgo0mNUJOLhwthOusxu9ai2wHTSRqKAz7njXNmz42DhdV0OIg8Kso2vTldXZoEiwOWCnH11LSWDjC/WZ0+VUhbq4qb+fr5M81VUvyViiqQWYzQqcs7ronE9nFXT68pDag/mw3miw31hC0+jqmje2Xur+Psq+nF4bWkyVqb9Tmq2+rqYgfKlT6gRMT8l+0ps/g9W+7n/oGAr2d36q9LcO3/s5kizKkkUkwiyeJWEaCQiLXBYhFLGapek8nxcsuJ8E7V17bKBtt4pRq/i3zhc86DcqxXuxe6V5P3A+WFjduLeU3hJHfe4nI1s5e26Qk3g7tztnbvm65TGbz9M04bpSNXc84s7CEk1R119JtceoXfbudxv3y7j7hXTX3F3203Y4/RG9R7YPu7FvzgbHCF78QvCGiT3AXR79RdyNZf05eHta73O3p/b/gp0oikIVuAhZIUSYZpiHeQxZiLNIJCpOoihTv4Hdz2BLn5/enYesqp1WWkDfxC1uCzVPciZikSyyKGERLDJF3wkZzSKWsBSewo0fA7XNmP48frZzOH/beIXx5S/gz2tZk3i2X8zhEkckt2DsE3m+Yx+BTJ4HcuDvdx5C6joufVOxBG34MGBPUPqgtv+Y2Kcy2cMYlELhf3GURiNpEnkf8yqvqrpAsOLm1N/kezgwu4/8XmMJfLrjEfK77Xw94i8fz1SLjo+ycH8AV7UtwU9EX+HDD0W6YJglcR4u5jF9KDCZhYVMkpDRhwMRUMXydd7nLz8AAcyMMP0KAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=aed3cd8ec3db0310a97ff54d0501310d"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">f0d5d042c3970310a97ff54d050131c4</flow>
+        <generation_source/>
+        <order>13</order>
+        <parent_ui_id>3ac7d338-0301-4042-b72e-9ece327a8506</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 09:26:52</sys_created_on>
+        <sys_id>c487dc06c3970310a97ff54d0501312d</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:43:26</sys_updated_on>
+        <ui_id>e66331b6-d57c-4e7e-9df0-6a45ff365b5f</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1YbU/bPBT9K8ifSx+naULKN0aFtOl5NgnYvlAUubbTenOdLIkZfar+993EzstS6NpRJJj4gvC9fjn3+Jzazs0KCYZOER/6rgd/TiIXOwMHB9wPAjrChAa+7w1d1EOKLDj0JEmSxndEhiknWawgAQ1dZOBfJrJEkuWXJkLnQrKUK3R6c9tDCUlhlpyn6HTVSe0KQ5Ipl9D1zOI4uqxwPAowXyZFIstToWa2/a+d5qoKxikrYA16iN/nXDEOeCIiM95DC6IYyeN0WUdgavZJySYwFyo3BS/IfSb+h/UcHxcdIw4lUstG3QwtUyYcjUlOAImmuU5r4mJBeWbIYTwiWubn7Zjp8CnJBRRZDsnJVFajY6kX6qNhBNUTtDZGZwCCJ0WlBXRbR3Q1j39cVigvhCpJsUkZUyLrFsmBuqnOCzwrpMV1h2UT2eCZS76AFcMF7BNEwmKzRLkKgF70ZxIa/UjGPwBdJmaqT2hRYR92gPQvID4uw19IKopy/4NpYHCx3Gclvmv+vtCRP5j6IxywYxbh6fEwcL1jQjk+5r7jcY/51HNctO6hbJmdS5JlDVGwQ+F3XZRpaLMEhYbjYghNRZKfAag7brlY96yLsBMN+Gg0wFMHYxfjwKM4cPnUPfFPXMKCB0QaCS5Zy0RVYtNMrcx+ptoB1YapLiysx+BaS5XNsOz0q63K8UcfTeLg1gowfk3egsWfYq3nccz+6jcU/MYCdKvYeOsg+RrrVG1xQDgXWamMR53Q6rGfI3YAWTnig0HZNUQX/J/4wX3zw9/vh5Ngm9QobiSVcgrCaBlhtTqHzc85C50+1SnQlK/XB7hk7QCpUv9lhamL0eqdxVSXeyFYR/Bjmzl6P24Uj7cr3uhiF8G7gze5v0i5U2+btqJRIyWmgSRQd1vwE2SwT9DpBKlY8QnqTVDRKyy0VYahByCsE2VstVqvTUSnxE7gtJrNaEaWWdkzo3POtDTRXyJhKX4bP4TfduCk8ttY86OxIWWTpuoZU+E0vIiNs+bKdihn+udatM8c72BnzvA1nThPfd0836MlrK/14DD4oXiGV8lwq/54S2z1xYrGiomigqxlT/M44NmZWn6+eeBw6gNkKLIkapbGOumDssiMp+v17aaNnjjbfhbcgYL6yAPnZL+jxFqx+dRgB7Vt2HygsElrweGhDsFXdut7mR48vN2mdOv1ijbaMmw2BrsPB47vD4duKFQUh3mIwzwld1xO4/ib+XrSMdF1mX5Xp/dzxQ5IK1dcW6gd5NYHZfOhZ085rPPscfY8gowhHtT/m/pfjPpvfwLowswHShYAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c487dc06c3970310a97ff54d0501312d"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Notification">0d8dd9f10f11101051218e8ebc767e27</action_type>
+        <action_type_parent display_value="Send Notification">7eda5d710f11101051218e8ebc767ec1</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>0d8dd9f10f11101051218e8ebc767e27</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">f0d5d042c3970310a97ff54d050131c4</flow>
+        <generation_source/>
+        <order>9</order>
+        <parent_ui_id>fedba023-7ea3-4e89-bf93-db3b3d11d297</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:37:04</sys_created_on>
+        <sys_id>ce03814ec3db0310a97ff54d050131af</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:43:26</sys_updated_on>
+        <ui_id>151f0709-86cf-4997-9d49-498fba842cb4</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9WW227cOAyGX6Xw9Xhg2Z6xJ3dtggAFuimQZHtTFAItUYlQ+VBZniY7yLsvZXuOmaRNu1mglyJFifzJz/LnVaBlcBKkMpdyoVikGGMRi2YsZjnmWIhsnmGcB5OgghJpp0VRW0nrJZjOG1arU4vgUHI2FZ21WLmHB/JL3TYG7j+N28gibrWR5A9OPn+ZBA1YOtGhDU5WB66fTclAgYa2Xq5zOszR3Td+LWvRlZQX12vjhzHybPS8eX9GHgry6bBJgHcOK4mUhwLT4iQooZLganu/sVDR8mNltoZbXbmh0BLuWv0P3ZzEfp9CqkyMImyWfBRoMKszcHDlbCdcZzd61VpgO2giUUFn3OmubdjwsXG6roYQB4VZR9emK6uLQZFgc8BOP7qWksDGF+ozp8upCnV1W3+/XCd5rqtekrFEUwswmxU4Z3XROZ/OKuj09TG1B/NxvdFgv7GEptHVDW9svdT9fZR9Ob0xtJgqU3+nNFt9U01B+FKn1AmYnpP9rDd/Aqt93X/RMRTs7/y70t86fO/nSLIoSxaRCLN4loRpJCAsclmEUMRqlqbzfF6w4GEStPftqYG23SpGreLfOl/woN+oFO/F7pXm/cD5YGF1495Seksc9XmYjGzl7LlBTuLt3O6cueXrjsdsPk/ThOtK1dzxiDsLSzRFXX8l1R6jdt27323cL+PuJ9Jdc3fdT9vx9Ef0Htk+7Ma+uRgcI3jxC8EbJvYId3n0B3E3lvX74O1pvc/dntr/C3aiKApV4CJkhRBhmmEe5jFkIc4ikag4iaJM/QJ2P4ItfX56dx6yqnZaaQF9E7e4sWzOxCwFkcgiSlgEi0zRd0JGs4glbBE/hRs/BWqbMf15/GL/8Be+fD+uYU3gwT3HSxtR3AKxT+Lljn0EMXkexIG7X3kAqdu49M3EErThw2A9QedBbf8xqU9lsocvKIXC/9oojUbSBPI+5lVeU3WFYMXtub/J93BgdR/1vcYS8HTHI9R32/l6pF8/nqkWHR9l4f4Armpbgp+IvsLDD0S6YJglcR4u5jF9IDCZhYVMkpDRBwMRUMXydd7lL/8CXsOa/PUKAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ce03814ec3db0310a97ff54d050131af"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Notification">0d8dd9f10f11101051218e8ebc767e27</action_type>
+        <action_type_parent display_value="Send Notification">7eda5d710f11101051218e8ebc767ec1</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>0d8dd9f10f11101051218e8ebc767e27</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">f0d5d042c3970310a97ff54d050131c4</flow>
+        <generation_source/>
+        <order>18</order>
+        <parent_ui_id>9df4ccf7-7577-41f6-876c-e679aa3c8613</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:37:26</sys_created_on>
+        <sys_id>e713454ec3db0310a97ff54d05013140</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:43:26</sys_updated_on>
+        <ui_id>f8f89165-e296-47c3-8f3f-b24a3482bbc6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9WW227cOAyGX6Xw9Xhg2Z6xJ3dtggAFuimQZHtTFAItUYlQ+VBZniY7yLsvZXuOmaRNu1mglyJFifzJz/LnVaBlcBKkMpdyoVikGGMRi2YsZjnmWIhsnmGcB5OgghJpp0VRW0nrJZjOG1arU4vgUHI2FZ21WLmHB/JL3TYG7j+N28gibrWR5A9OPn+ZBA1YOtGhDU5WB66fTclAgYa2Xq5zOszR3Td+LWvRlZQX12vjhzHybPS8eX9GHgry6bBJgHcOK4mUhwLT4iQooZLganu/sVDR8mNltoZbXbmh0BLuWv0P3ZzEfp9CqkyMImyWfBRoMKszcHDlbCdcZzd61VpgO2giUUFn3OmubdjwsXG6roYQB4VZR9emK6uLQZFgc8BOP7qWksDGF+ozp8upCnV1W3+/XCd5rqtekrFEUwswmxU4Z3XROZ/OKuj09TG1B/NxvdFgv7GEptHVDW9svdT9fZR9Ob0xtJgqU3+nNFt9U01B+FKn1AmYnpP9rDd/Aqt93X/RMRTs7/y70t86fO/nSLIoSxaRCLN4loRpJCAsclmEUMRqlqbzfF6w4GEStPftqYG23SpGreLfOl/woN+oFO/F7pXm/cD5YGF1495Seksc9XmYjGzl7LlBTuLt3O6cueXrjsdsPk/ThOtK1dzxiDsLSzRFXX8l1R6jdt27323cL+PuJ9Jdc3fdT9vx9Ef0Htk+7Ma+uRgcI3jxC8EbJvYId3n0B3E3lvX74O1pvc/dntr/C3aiKApV4CJkhRBhmmEe5jFkIc4ikag4iaJM/QJ2P4ItfX56dx6yqnZaaQF9E7e4sWzOxCwFkcgiSlgEi0zRd0JGs4glbBE/hRs/BWqbMf15/GL/8Be+fD+uYU3gwT3HSxtR3AKxT+Lljn0EMXkexIG7X3kAqdu49M3EErThw2A9QedBbf8xqU9lsocvKIXC/9oojUbSBPI+5lVeU3WFYMXtub/J93BgdR/1vcYS8HTHI9R32/l6pF8/nqkWHR9l4f4Armpbgp+IvsLDD0S6YJglcR4u5jF9IDCZhYVMkpDRBwMRUMXydd7lL/8CXsOa/PUKAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e713454ec3db0310a97ff54d05013140"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=f0d5d042c3970310a97ff54d050131c4"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=f0d5d042c3970310a97ff54d050131c4^sys_idNOT IN0af381cec3db0310a97ff54d05013181,22c71846c3970310a97ff54d05013117,25371406c3970310a97ff54d050131f9,53c30d8ec3db0310a97ff54d050131e6,72769882c3970310a97ff54d050131e0,79c30d8ec3db0310a97ff54d05013167,a3579806c3970310a97ff54d05013152,a5371406c3970310a97ff54d050131fa,bff305cec3db0310a97ff54d0501314c,c9f71c46c3970310a97ff54d05013122,f2769882c3970310a97ff54d050131e1,f4761882c3970310a97ff54d0501316f,fba71446c3970310a97ff54d05013152"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">b5344dcec3db0310a97ff54d05013156</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">f0d5d042c3970310a97ff54d050131c4</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>16</order>
+        <outputs_assigned/>
+        <parent_ui_id>069f9300-eeb8-4267-b29a-417bd8bce4b1</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:41:10</sys_created_on>
+        <sys_id>0af381cec3db0310a97ff54d05013181</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:14</sys_updated_on>
+        <ui_id>c2235fd1-01ff-4d6e-bb9f-db6a38e2c3e9</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">aac71846c3970310a97ff54d05013116</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">f0d5d042c3970310a97ff54d050131c4</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <parent_ui_id>826f7dbf-f299-4cbb-b428-76981f55c94c</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 09:28:09</sys_created_on>
+        <sys_id>22c71846c3970310a97ff54d05013117</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:14</sys_updated_on>
+        <ui_id>fedba023-7ea3-4e89-bf93-db3b3d11d297</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Uy27bMBD8lYJnW9DDMirfggYBCrQN0AS5tIGwIlc2UYpUSSqOa/jfu9TDMRq3DYocexOH+5jZHWrPTOfbzrtbc+GcXGu2+nI/Y1IHjL73TEODbMW40UJ6aTSbsQdQXcD2eyyKBEWRzZM0r+aLlMdzqPNiDhxqvog51pBH0LbWUE7pPHg8HL52cZwJDpqjUiiooJCuVbC7e+26fCOVsDiKasGSFo+Wrfa/XPldi6WCChW1v/FW6jWlS0GnAvI6T+KcZ+kyS+M4fbtIqmVWJanIABdLipsS353M6MzYQhOC3FTeWBG4pPGM4aNHLYjzqgblcMYa0AK8sTu28rYjwCKIa612x4iN1J6qsRD76OQPDJXiOETWSMI4DrfHYzlOeYD5xkiO123PrUc8VGrM4UZ1jf40SAj7oXl3yk/7IaRzVA/bQDrQGDnVNxuz/Tw1vJK6FzheKsNBHU/gaQxV59GFbaDChgqVDe2UhlOGxco+mbg00VrRIaqV2VLT4NIIeCAe0YwguiL8sofvwMqg4iOVoWTaoCsdt7KdtPXN2aGfSvm9C3wGfaOSchgGBQxpF9TmAUfSh9nz11D2wNOT+IOrX9uYdQx1UvDkvDEhO2fMNx965Lk9Jx2/8WjyF4+OyItMmuf/PXrq0UCzAid52f91qVx48f9s0vtgxqGFGzwkkEtHTG4D9n76s4eLHW1d8lNoa+y3oOEJO/wEmmwb6SMGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">ad371406c3970310a97ff54d050131f8</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">f0d5d042c3970310a97ff54d050131c4</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Parallel Branch">a1168de173311300b61e66476bf6a7d0</logic_definition>
+        <order>11</order>
+        <outputs_assigned/>
+        <parent_ui_id>15f7a0c6-4199-46cc-b2e8-a9c9eef5f96e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 09:25:37</sys_created_on>
+        <sys_id>25371406c3970310a97ff54d050131f9</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:14</sys_updated_on>
+        <ui_id>f00b58f7-c282-4d80-b6f5-90731858cf0e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">fd344dcec3db0310a97ff54d0501314b</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">f0d5d042c3970310a97ff54d050131c4</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>10</order>
+        <outputs_assigned/>
+        <parent_ui_id>fedba023-7ea3-4e89-bf93-db3b3d11d297</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:40:26</sys_created_on>
+        <sys_id>53c30d8ec3db0310a97ff54d050131e6</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:14</sys_updated_on>
+        <ui_id>6264f6fb-74c7-400a-a1f9-c597194cfbc1</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">fa769882c3970310a97ff54d050131df</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">f0d5d042c3970310a97ff54d050131c4</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Parallel Branch">a1168de173311300b61e66476bf6a7d0</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id>15f7a0c6-4199-46cc-b2e8-a9c9eef5f96e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 09:22:26</sys_created_on>
+        <sys_id>72769882c3970310a97ff54d050131e0</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:14</sys_updated_on>
+        <ui_id>c42bc2d1-4a52-46c1-8e8c-4af0b967c721</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">31344dcec3db0310a97ff54d0501313a</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">f0d5d042c3970310a97ff54d050131c4</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <parent_ui_id>f90eca3a-8886-42f6-9967-9818f88f5106</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:40:20</sys_created_on>
+        <sys_id>79c30d8ec3db0310a97ff54d05013167</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:14</sys_updated_on>
+        <ui_id>fed5881b-8a03-4359-96c1-ed73790bd42e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">2f579806c3970310a97ff54d05013151</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">f0d5d042c3970310a97ff54d050131c4</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id>826f7dbf-f299-4cbb-b428-76981f55c94c</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 09:26:18</sys_created_on>
+        <sys_id>a3579806c3970310a97ff54d05013152</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:14</sys_updated_on>
+        <ui_id>f90eca3a-8886-42f6-9967-9818f88f5106</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Uy27bMBD8lYJnW9DDMirfjBYBCrQN0AS5tIGwIlc2UYpUSSqOa/jfu9TDMRoHLYocexOH+5jZHerATOfbzrtbs3ZObjRbfb2fMakDRt8HpqFBtmLcaCG9NJrN2AOoLmCHAxZFgqLI5kmaV/NFyuM51HkxBw41X8Qca8gjaFtrKKd0Hjwej9+6OM7EgKKgekK6VsH+7pXL8q1UwuIoqQVLSjxatjr8duX3LZYKKlTU/cZbqTeULgWdCsjrPIlznqXLLI3j9O0iqZZZlaQiA1wsKW5KfHc2oQtDC00IclN5Y0XgksYzho8etSDOqxqUwxlrQAvwxu7ZytuOAIsgrrXanyK2UnuqxkLso5M/MVSK4xBZIwnjONyejuU45AHmWyM5Xrc9tx7xUKkxhxvVNfrzICGsh8bdKT+th5DOUT1sA+lAY+RU32zN7svU8ErqXuB4qQwHdTqBpzFUnUcXtoEKGypUNrQ8Gk4ZNij7ZOLSRBtFh6hWZkdNg0cj4IF4RDOC6Irw9z18B1YGFZ+oDCXTBl3puJXtpK1vzo79VMofXeAz6BuVlMMwKGBIW1ObBxxJH2fP30LZA08PYv2ip9eva8s6hjopeHLZlpBdsuWbjz3y3JyTihccmvzBoSPyVxbN8/8OPXdooFmBk7zs/7hULrz3f7bofbDi0MINHhLIpSMmtwH7MP3Vw8Weti75ObQz9nvQ8IQdfwFFBhk0HwYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">21371406c3970310a97ff54d050131fa</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">f0d5d042c3970310a97ff54d050131c4</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>11➛12</order>
+        <outputs_assigned/>
+        <parent_ui_id>f00b58f7-c282-4d80-b6f5-90731858cf0e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 09:25:37</sys_created_on>
+        <sys_id>a5371406c3970310a97ff54d050131fa</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:14</sys_updated_on>
+        <ui_id>3ac7d338-0301-4042-b72e-9ece327a8506</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Uy27bMBD8FYNnQ5Cs2Gh8C1IECNA2QBPk0gbCilzFRClSJSk7ruF/764eiRG7D7Q99kYO9zGzO+BOuDY2bQx37iIE/WjF8tPDVGjLGJ13wkKNYimks0pH7ayYijWYlrHd7tIjRFRFlsjWe7QxiR7WaIq4bXC//9ymaa60jegtcDIYSlc6NAa2939XRa60URTcE27AE0+KEMvdqycuUhgo0VCz2+i1faR0reh2DvNqnqVzmc8W+SxNZ2/OsnKRl9lM5YBnC4obEy8P9J8YCTchKIzlnVfMZZZOBT5FtAqpXwUm4FTUYBVE57diGX1LAMlXN9ZsnyNWJJaqCY59CvobcqU05cgKSZjE/vX5Wgwz7WG5clriTdNx65AIpRlypDNtbT/0EngbWEFr4rgNQtpA9bBh0kxj4FTdrtzm49jwSttO4PBonKSljDeINIayjRh4G2iwpkJFDU1Dwyka79a6SyYudfJo6JJUxm2oKTswAcnEE5oRJFeEv+3ge/CaVbynMpRMGwxFkF43o7auudh3Uym+tsyn1zcoKfphUECfdkFt1jiQ3k+PnV50wIvdrw8dOOktOukWf+Tpn4X+C+NWKVTZucxOGxfyU8advOuQY/uOOn/g4ewXHh6Q3zLxfP7fw4ceZpolBC2L7selcvwj/LGJH9isfYvQe0ih1IGY3DF2Pf7q/LClrWt5CG2c/8IaXrD9d/yxd1kfBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">b9344dcec3db0310a97ff54d0501315b</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">f0d5d042c3970310a97ff54d050131c4</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>19</order>
+        <outputs_assigned/>
+        <parent_ui_id>9df4ccf7-7577-41f6-876c-e679aa3c8613</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:41:17</sys_created_on>
+        <sys_id>bff305cec3db0310a97ff54d0501314c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:14</sys_updated_on>
+        <ui_id>b4d0bfab-b9f9-46bc-b8f5-0a7a66e47a59</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">45f71c46c3970310a97ff54d05013122</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">f0d5d042c3970310a97ff54d050131c4</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>17</order>
+        <outputs_assigned/>
+        <parent_ui_id>3ac7d338-0301-4042-b72e-9ece327a8506</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 09:28:52</sys_created_on>
+        <sys_id>c9f71c46c3970310a97ff54d05013122</sys_id>
+        <sys_mod_count>25</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:14</sys_updated_on>
+        <ui_id>9df4ccf7-7577-41f6-876c-e679aa3c8613</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Uy27bMBD8lYJn25AsS6l9C1oEKNA2QBPk0gbCilzaRClSJak4ruF/71IPx2jcB4ocexOH+5jZHWrPbBuaNvhbe+m9Whu2+nw/YcpEjL73zECNbMW4NUIFZQ2bsAfQbcT2eyyKLEurYiryCz5d4AVOl0Im0wIWuZRZkVe5nEHTOEs5pQ8Q8HD40iZJJjgYjlqjoIJC+UbD7u6l6/KN0sLhIKoBR1oCOrba/3QVdg2WGirU1P4mOGXWlK4EnZaQyzxNcp7Ni2yeJPPXCyKWVelcZICLguLGxDcnMzozttiEID+Wt05ELvNkwvAxoBHEeSVBe5ywGoyAYN2OrYJrCXAI4tro3TFio0ygaizGPnr1HWOlJImREkkYx/72eCyHKfcw31jF8brpuHVIgEoPOdzqtjYfewlxPyih1WHcDyGtp3rYRNKRxsBJ3mzs9tPY8EqZTuBwqS0HfTxBoDFUbUAft4EaaypU1rRTGk4ZF6u6ZOJSz9aaDjOp7ZaaRpfOgEfiM5oRzK4If9vBd+BUVPGBylAybdCXnjvVjNq65uzQTaX81kY+vb5BSdkPgwL6tEtq84AD6cPk+WsoO+DpSfzG1S9tTJmATJc8PW9MyM4Z89X7Dnluz1HHLzya/sGjA/JXJs3z/x499WikWYFXvOz+ulQuvvh/Nul9NGPfwvceEsiVJya3EXs3/tnjxY62rvgptLXua9TwhB1+AIWVCmYjBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">7e769882c3970310a97ff54d050131e0</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">f0d5d042c3970310a97ff54d050131c4</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2➛3</order>
+        <outputs_assigned/>
+        <parent_ui_id>c42bc2d1-4a52-46c1-8e8c-4af0b967c721</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 09:22:26</sys_created_on>
+        <sys_id>f2769882c3970310a97ff54d050131e1</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:14</sys_updated_on>
+        <ui_id>826f7dbf-f299-4cbb-b428-76981f55c94c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UTWsbMRD9K0Zns+x6s6bxLSQECm0DTcilDWJWmrVFtdJW0tpxjf97R/vhmNihJfTYm/Q0H+/NPLRjtg1NG/yDvfJeLQ1bfHuaMmUiRucdM1AjWzBhjVRBWcOmbA26jdhud+0QAkqeJaJ1Dk1IgoM1ah62De7339s0zaW0NfqgBGVK5RsN28d3FxArpSXF9TQbcMQuoGOL3aunmM81lKipz31wyiwpXUm6XUJRFVlaiHw2z2dpOvtwkZXzvMxmMge8mFPcmHh9pPrMIGITgvxY3joZuczSKcPngEYi9atAe5yyGoyEYN2WLYJrCSDl8s7o7SFipUygaizGPnv1C2OlNI2RFZIwgf3r4cqHcfawWFkl8K7puHVIgFIPOcLqtjZfeglxEVhBq8O4CEJaT/WwiaQjjYFTdb+ym69jw1tlOoHDo7YC9OEGgcZQtgF93AZqrKkQr6FpaDi8cXatumTiUidLTZek0nZDTaPvEhCReEIzguSW8JsOfgSnoorPVIaSaYOee+FUM2rrmrN9NxX+s418en2DEt4PgwL6tCtqs8aB9H566m/eAS8mvxnMN+mNOel2fuLkN6L+hV2rFKrsUmTn7Qr5ObtOPnXIqWlHdW84N/uDcwfkr6xbFP+de+zcSLMErwTvflcqF/+Bd1v3KVq0b+F7D0kUyhOTh4h9HH/w+LClrStxDG2s+xE1vGD73yKGy6oLBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">34761882c3970310a97ff54d0501316e</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">f0d5d042c3970310a97ff54d050131c4</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Do the following in Parallel">5d31e5dedfe50300b61ecae83df26326</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 09:22:18</sys_created_on>
+        <sys_id>f4761882c3970310a97ff54d0501316f</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:14</sys_updated_on>
+        <ui_id>15f7a0c6-4199-46cc-b2e8-a9c9eef5f96e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">77a71446c3970310a97ff54d05013152</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">f0d5d042c3970310a97ff54d050131c4</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>14</order>
+        <outputs_assigned/>
+        <parent_ui_id>3ac7d338-0301-4042-b72e-9ece327a8506</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 09:27:41</sys_created_on>
+        <sys_id>fba71446c3970310a97ff54d05013152</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:14</sys_updated_on>
+        <ui_id>069f9300-eeb8-4267-b29a-417bd8bce4b1</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UXW/TMBT9K8jPbZU0Tcb6VoEmIQGT2LQXmKIb+7q1cOxgO+tK1f/OdT66inUCoT3yFh/fj3PuPc6e2TY0bfC3duW9Whu2/Ho/YcpEjL73zECNbMm4NUIFZQ2bsAfQbcT2eyyKLEurYiryCz5d4AVOL4VMpgUscimzIq9yOYOmcZZySh8g4OHwrU2STPQoCqonlG807O5euSzfKC0cDpIacKQkoGPL/W9XYddgqaFCTd1vglNmTelK0OkScpmnSc6zeZHNk2T+dkG8siqdiwxwUVDcmPjuZEJnhhabEOTH8taJyGWeTBg+BjSCOC8laI8TVoMREKzbsWVwLQEOQVwbvTtGbJQJVI3F2EevfmKslCQxUiIJ49jfHo/lMOQe5hurOF43HbcOCVDpIYdb3dbmcy8hrgcltDqM6yGk9VQPm0g60hg4yZuN3X4ZG14p0wkcLrXloI8nCDSGqg3o4zZQY02FypqWR8Mp4wZVl0xc6tla02Emtd1S0+jRGfBIfEYzgtkV4e87+A6ciio+URlKpg360nOnmlFb15wduqmUP9rIp9c3KCn7YVBAn7aiNg84kD5Mnr+FsgOeHsTqRU+vXteWMgGZXvL0vC0hO2fLNx875Lk5RxUvODT9g0MH5K8smuf/HXrq0EizAq942f1xqVx87/9s0ftoxb6F7z0kkCtPTG4j9mH8q8eLHW1d8VNoa933qOEJO/wCYMp8jB8GAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=f0d5d042c3970310a97ff54d050131c4"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=f0d5d042c3970310a97ff54d050131c4"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f0d5d042c3970310a97ff54d050131c4</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 09:20:22</sys_created_on>
+        <sys_id>68061c42c3970310a97ff54d05013107</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Info travel Booking" source="x_2166443_info_t_0">95ed2831c3c38310a97ff54d05013196</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 09:20:22</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f0d5d042c3970310a97ff54d050131c4</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 09:20:21</sys_created_on>
+        <sys_id>a006d842c3970310a97ff54d050131e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Info travel Booking" source="x_2166443_info_t_0">95ed2831c3c38310a97ff54d05013196</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 09:20:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_f0d5d042c3970310a97ff54d050131c4"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_f0d5d042c3970310a97ff54d050131c4"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>travel_cancellation_notification</internal_name>
+        <label_cache>[{"name":"Created_1.current","label":"Trigger - Record Created➛TravelBooking Record","reference":"x_2166443_info_t_0_travelbooking","reference_display":"TravelBooking","type":"reference","base_type":"reference","usedInstances":{"e991ed93-125b-42c0-af59-acafc40cefa5":["record"],"e66331b6-d57c-4e7e-9df0-6a45ff365b5f":["record"],"5660b06b-f0d6-4583-ad5e-aa1a58c22b56":["record"],"151f0709-86cf-4997-9d49-498fba842cb4":["record"],"f8f89165-e296-47c3-8f3f-b24a3482bbc6":["record"],"580f6b36-49ea-4355-81e5-ca71e234e58d":["record"],"4f902b28-9359-4cf5-af34-0a1033f31733":["record"]},"attributes":{}},{"name":"Created_1.current.assigned_to.manager","label":"Trigger - Record Created➛TravelBooking Record➛Assigned to➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager","choices":[{"order":0.0}],"usedInstances":{}},{"name":"e66331b6-d57c-4e7e-9df0-6a45ff365b5f.approval_state","label":"13 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.travel_type","label":"Trigger - Record Created➛TravelBooking Record➛Travel Type","reference":"","reference_display":"Travel Type","type":"choice","base_type":"choice","parent_table_name":"x_2166443_info_t_0_travelbooking","column_name":"travel_type","choices":[{"label":"-- None --","used":false,"image":"","reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"used":false,"image":"","label":"International","reference":false,"rawLabel":"International","selected":false,"missing":false,"value":"international","parameters":{"name":"x_2166443_info_t_0_travelbooking","dependent_values":[""]}},{"used":false,"image":"","label":"Domestic","reference":false,"rawLabel":"Domestic","selected":false,"missing":false,"value":"domestic","parameters":{"name":"x_2166443_info_t_0_travelbooking","dependent_values":[""]}}],"usedInstances":{"3ac7d338-0301-4042-b72e-9ece327a8506":["condition"],"826f7dbf-f299-4cbb-b428-76981f55c94c":["condition"]}},{"name":"e991ed93-125b-42c0-af59-acafc40cefa5.approval_state","label":"4 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.assignment_group.manager","label":"Trigger - Record Created➛TravelBooking Record➛Assignment group➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user_group","column_name":"manager","usedInstances":{"e991ed93-125b-42c0-af59-acafc40cefa5":["approval_conditions"],"e66331b6-d57c-4e7e-9df0-6a45ff365b5f":["approval_conditions"]}}]</label_cache>
+        <master>true</master>
+        <name>Travel_Cancellation_Notification</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Travel_Cancellation_Notification">f0d5d042c3970310a97ff54d050131c4</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fd344dcec3db0310a97ff54d050131d6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:15</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=fd344dcec3db0310a97ff54d050131d6"/>
+    <sys_variable_value action="delete_multiple" query="document_key=fd344dcec3db0310a97ff54d050131d6"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=fd344dcec3db0310a97ff54d050131d6"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=fd344dcec3db0310a97ff54d050131d6^sys_idNOT IN31344dcec3db0310a97ff54d050131d9"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>fd344dcec3db0310a97ff54d050131d6</id>
+        <name>Travel_Cancellation_Notification</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:15</sys_created_on>
+        <sys_id>31344dcec3db0310a97ff54d050131d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:15</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=31344dcec3db0310a97ff54d050131d9"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=fd344dcec3db0310a97ff54d050131d6^sys_idNOT IN02344dcec3db0310a97ff54d050131f4,35344dcec3db0310a97ff54d050131db"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Travel_Cancellation_Notification">fd344dcec3db0310a97ff54d050131d6</model>
+        <model_id>fd344dcec3db0310a97ff54d050131d6</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_fd344dcec3db0310a97ff54d050131d6</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:15</sys_created_on>
+        <sys_id>02344dcec3db0310a97ff54d050131f4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:15</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=02344dcec3db0310a97ff54d050131f4"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Travel_Cancellation_Notification">fd344dcec3db0310a97ff54d050131d6</model>
+        <model_id>fd344dcec3db0310a97ff54d050131d6</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_fd344dcec3db0310a97ff54d050131d6</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:15</sys_created_on>
+        <sys_id>35344dcec3db0310a97ff54d050131db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:15</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=35344dcec3db0310a97ff54d050131db"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=fd344dcec3db0310a97ff54d050131d6"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=fd344dcec3db0310a97ff54d050131d6"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=fd344dcec3db0310a97ff54d050131d6^sys_idNOT IN4a348dcec3db0310a97ff54d05013120"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">fd344dcec3db0310a97ff54d050131d6</flow>
+        <generation_source/>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:16</sys_created_on>
+        <sys_id>4a348dcec3db0310a97ff54d05013120</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:16</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY2W7jNhT9FUFPHcAFtHjN24yTQQOkCWB7pg9pRqBE0iaGJl2JUuIO8u8ltVnW4niRU+fJMEnznnt47rmkH3/pFLiI6lf6DLgU6R2dMIF8BuhsvUJyWKhhh4GlmlsCBoHg/lq/En6IOjr2+XKGlisKhFyMAQ3kIPch8vUrs6NHgIZoug5uodxJ/j7eJt1TT6fl9xfHMvv9btd2CMPcEY7hCB9EiLqc/yRsLpdCEsgg6+/pL2bx9Jd82lsQCn3E9KvHp46+Ar4MJBSIX6UpIbNytlLW7pPciMLoYQ+MLGR4tmlblmFYw67p9m3XtKANkGHIdWW+SjmJGto2hKAXgRhEMOeqwqiPAHxgdJ2vWMgDSdhbgpeA/Ct3HxpqHUYyKw8lc/lXJ2UqGfYWnHjoYSUIZ8lIgjOZ5DRcsvsEv+IYYRBSkXEsR8JA7odWCrICkSLC0wV/nmQBvxIWZ5dOUu4Bmn8DQvjEDQUK1FFgQuWhOAk3AQ/9GP3kZvwwuXb++jwb/3EzcSY309nkdjy7udZf47ycf0K1Y4IwxeIk6bzmwvhKEFUHyMKlK9F09MDzyUp89gSJMmW+djZqH3MGScxKRfFeNhVsKz7LfpfkDaNR9F4hYib8ROWO0szfoWHYEPIlCgTxfjxMKnMpTLWF5KNSEkdXwbiYb1wF/T4AEIGGKnBxoQqKPNYkKmooLXK1qx7SkX0KomsY/1NJpDZ4bEU8AyYCR3AHQOgUWFLSCGPH5RDR6008OU7mc1lEhK1CEbxZIklu1Tp5u0L8kMktnPyEqnUSE5kzekcCie9RVvn3XN1xCvgu3XESMo0zzQt9SZPQ5Elr2e5ajFOpA98uwTzlGk8RRZ4oyAN/C4rf/iRBoBrABn0ePB6pRqfrIoTMtE8J+tSmSVRJj0r5tFb12enFFW+aGLsIW8ZA1btp2C42jYHRAxjahuFZhYqvQmzELkpCOUvlH1b3QSxRuocmysSn4I1ijeyl6Gi7HDISlHBSexm3A81sCZqloJVs0j7IJ3OxJsPX25rdlVrLNw4AIyB/AbMc97lR7OGLmPJn6cBHeCLmPpr7PGSw7E1qT43Iz60VLbmhC7yfu8NuVmi/pcf26dKccUN7JlzA1mfzRBub7gh1kSGt0JYu6PZGI9cDFsaD/gBZZskTN+BqEX8IL3xDDFGdmpp8sVbPUV0ZHOCIJwCsuOPBAE/3xVSuta6YzH0M/3teIOZIqL5DlcNVbHBOCUTZXLseUAkdbaq+LR+4S5NS0fFw5PXMwcAbyHeQdAHcRS4wu1YPjAZ9e9gruUAF3i7oooatd3kdBesgBtLgEN+Sqcv68+CcUg6QEMkfSYf283g9SAIUOqs6Ei02Ge5rik7tdrNQmyLZJ+P3cWv9nYtFpbPL0F/k+FZodQ+85+z3Gjhtvr6YfAjsQ00DlEu7eJREEm2zfqYnGeoOeyNs1xsPHtUZzwZiM/iLv4jsKZCoUWp1N5J9CzKqrevGK8QRJVYST/FusePy0xYpZuukWOcjxT75wpVVaOM79BiwH6ixxbeN47sbZ8jhuNa9CdbSvyIR1Ny1JhZIkknlnVqG0lTcNvtJcjmutDc5rKX3mPY6l6K5nPY11+SE5r9L4udpXyUpvMcLGsEB6PXshrvzqPyCroP5RhYX38wOFk5Up8OdHe2wfct71va0Ql1t62TPbtVq1vUt67Ssa5vWW1mf3o52vf9rUFxoo3n6DwOB2Hk2IAAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=fd344dcec3db0310a97ff54d050131d6^sys_idNOT IN46348dcec3db0310a97ff54d05013117,4e348dcec3db0310a97ff54d0501311d,86348dcec3db0310a97ff54d0501311a,8a348dcec3db0310a97ff54d0501311c,c2348dcec3db0310a97ff54d05013119,c6348dcec3db0310a97ff54d0501311b"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">fd344dcec3db0310a97ff54d050131d6</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>826f7dbf-f299-4cbb-b428-76981f55c94c</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:16</sys_created_on>
+        <sys_id>46348dcec3db0310a97ff54d05013117</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:16</sys_updated_on>
+        <ui_id>e991ed93-125b-42c0-af59-acafc40cefa5</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1YbU/bPBT9K8ifSx+naULKN0aFtOl5NgnYvlAUubbTenOdLIkZfar+993EzstS6NpRJJj4gvC9fjn3+Jzazs0KCYZOER/6rgd/TiIXOwMHB9wPAjrChAa+7w1d1EOKLDj0JEmSxndEhiknWawgAQ1dZOBfJrJEkuWXJkLnQrKUK3R6c9tDCUlhlpyn6HTVSe0KQ5Ipl9D1zOI4uqxwPAowXyZFIstToWa2/a+d5qoKxikrYA16iN/nXDEOeCIiM95DC6IYyeN0WUdgavZJySYwFyo3BS/IfSb+h/UcHxcdIw4lUstG3QwtUyYcjUlOAImmuU5r4mJBeWbIYTwiWubn7Zjp8CnJBRRZDsnJVFajY6kX6qNhBNUTtDZGZwCCJ0WlBXRbR3Q1j39cVigvhCpJsUkZUyLrFsmBuqnOCzwrpMV1h2UT2eCZS76AFcMF7BNEwmKzRLkKgF70ZxIa/UjGPwBdJmaqT2hRYR92gPQvID4uw19IKopy/4NpYHCx3Gclvmv+vtCRP5j6IxywYxbh6fEwcL1jQjk+5r7jcY/51HNctO6hbJmdS5JlDVGwQ+F3XZRpaLMEhYbjYghNRZKfAag7brlY96yLsBMN+Gg0wFMHYxfjwKM4cPnUPfFPXMKCB0QaCS5Zy0RVYtNMrcx+ptoB1YapLiysx+BaS5XNsOz0q63K8UcfTeLg1gowfk3egsWfYq3nccz+6jcU/MYCdKvYeOsg+RrrVG1xQDgXWamMR53Q6rGfI3YAWTnig0HZNUQX/J/4wX3zw9/vh5Ngm9QobiSVcgrCaBlhtTqHzc85C50+1SnQlK/XB7hk7QCpUv9lhamL0eqdxVSXeyFYR/Bjmzl6P24Uj7cr3uhiF8G7gze5v0i5U2+btqJRIyWmgSRQd1vwE2SwT9DpBKlY8QnqTVDRKyy0VYahByCsE2VstVqvTUSnxE7gtJrNaEaWWdkzo3POtDTRXyJhKX4bP4TfduCk8ttY86OxIWWTpuoZU+E0vIiNs+bKdihn+udatM8c72BnzvA1nThPfd0836MlrK/14DD4oXiGV8lwq/54S2z1xYrGiomigqxlT/M44NmZWn6+eeBw6gNkKLIkapbGOumDssiMp+v17aaNnjjbfhbcgYL6yAPnZL+jxFqx+dRgB7Vt2HygsElrweGhDsFXdut7mR48vN2mdOv1ijbaMmw2BrsPB47vD4duKFQUh3mIwzwld1xO4/ib+XrSMdF1mX5Xp/dzxQ5IK1dcW6gd5NYHZfOhZ085rPPscfY8gowhHtT/m/pfjPpvfwLowswHShYAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=46348dcec3db0310a97ff54d05013117"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Notification">0d8dd9f10f11101051218e8ebc767e27</action_type>
+        <action_type_parent display_value="Send Notification">7eda5d710f11101051218e8ebc767ec1</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>0d8dd9f10f11101051218e8ebc767e27</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">fd344dcec3db0310a97ff54d050131d6</flow>
+        <generation_source/>
+        <order>18</order>
+        <parent_ui_id>9df4ccf7-7577-41f6-876c-e679aa3c8613</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:16</sys_created_on>
+        <sys_id>4e348dcec3db0310a97ff54d0501311d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:16</sys_updated_on>
+        <ui_id>f8f89165-e296-47c3-8f3f-b24a3482bbc6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9WW227cOAyGX6Xw9Xhg2Z6xJ3dtggAFuimQZHtTFAItUYlQ+VBZniY7yLsvZXuOmaRNu1mglyJFifzJz/LnVaBlcBKkMpdyoVikGGMRi2YsZjnmWIhsnmGcB5OgghJpp0VRW0nrJZjOG1arU4vgUHI2FZ21WLmHB/JL3TYG7j+N28gibrWR5A9OPn+ZBA1YOtGhDU5WB66fTclAgYa2Xq5zOszR3Td+LWvRlZQX12vjhzHybPS8eX9GHgry6bBJgHcOK4mUhwLT4iQooZLganu/sVDR8mNltoZbXbmh0BLuWv0P3ZzEfp9CqkyMImyWfBRoMKszcHDlbCdcZzd61VpgO2giUUFn3OmubdjwsXG6roYQB4VZR9emK6uLQZFgc8BOP7qWksDGF+ozp8upCnV1W3+/XCd5rqtekrFEUwswmxU4Z3XROZ/OKuj09TG1B/NxvdFgv7GEptHVDW9svdT9fZR9Ob0xtJgqU3+nNFt9U01B+FKn1AmYnpP9rDd/Aqt93X/RMRTs7/y70t86fO/nSLIoSxaRCLN4loRpJCAsclmEUMRqlqbzfF6w4GEStPftqYG23SpGreLfOl/woN+oFO/F7pXm/cD5YGF1495Seksc9XmYjGzl7LlBTuLt3O6cueXrjsdsPk/ThOtK1dzxiDsLSzRFXX8l1R6jdt27323cL+PuJ9Jdc3fdT9vx9Ef0Htk+7Ma+uRgcI3jxC8EbJvYId3n0B3E3lvX74O1pvc/dntr/C3aiKApV4CJkhRBhmmEe5jFkIc4ikag4iaJM/QJ2P4ItfX56dx6yqnZaaQF9E7e4sWzOxCwFkcgiSlgEi0zRd0JGs4glbBE/hRs/BWqbMf15/GL/8Be+fD+uYU3gwT3HSxtR3AKxT+Lljn0EMXkexIG7X3kAqdu49M3EErThw2A9QedBbf8xqU9lsocvKIXC/9oojUbSBPI+5lVeU3WFYMXtub/J93BgdR/1vcYS8HTHI9R32/l6pF8/nqkWHR9l4f4Armpbgp+IvsLDD0S6YJglcR4u5jF9IDCZhYVMkpDRBwMRUMXydd7lL/8CXsOa/PUKAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4e348dcec3db0310a97ff54d0501311d"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Notification">0d8dd9f10f11101051218e8ebc767e27</action_type>
+        <action_type_parent display_value="Send Notification">7eda5d710f11101051218e8ebc767ec1</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>0d8dd9f10f11101051218e8ebc767e27</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">fd344dcec3db0310a97ff54d050131d6</flow>
+        <generation_source/>
+        <order>9</order>
+        <parent_ui_id>fedba023-7ea3-4e89-bf93-db3b3d11d297</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:16</sys_created_on>
+        <sys_id>86348dcec3db0310a97ff54d0501311a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:16</sys_updated_on>
+        <ui_id>151f0709-86cf-4997-9d49-498fba842cb4</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9WW227cOAyGX6Xw9Xhg2Z6xJ3dtggAFuimQZHtTFAItUYlQ+VBZniY7yLsvZXuOmaRNu1mglyJFifzJz/LnVaBlcBKkMpdyoVikGGMRi2YsZjnmWIhsnmGcB5OgghJpp0VRW0nrJZjOG1arU4vgUHI2FZ21WLmHB/JL3TYG7j+N28gibrWR5A9OPn+ZBA1YOtGhDU5WB66fTclAgYa2Xq5zOszR3Td+LWvRlZQX12vjhzHybPS8eX9GHgry6bBJgHcOK4mUhwLT4iQooZLganu/sVDR8mNltoZbXbmh0BLuWv0P3ZzEfp9CqkyMImyWfBRoMKszcHDlbCdcZzd61VpgO2giUUFn3OmubdjwsXG6roYQB4VZR9emK6uLQZFgc8BOP7qWksDGF+ozp8upCnV1W3+/XCd5rqtekrFEUwswmxU4Z3XROZ/OKuj09TG1B/NxvdFgv7GEptHVDW9svdT9fZR9Ob0xtJgqU3+nNFt9U01B+FKn1AmYnpP9rDd/Aqt93X/RMRTs7/y70t86fO/nSLIoSxaRCLN4loRpJCAsclmEUMRqlqbzfF6w4GEStPftqYG23SpGreLfOl/woN+oFO/F7pXm/cD5YGF1495Seksc9XmYjGzl7LlBTuLt3O6cueXrjsdsPk/ThOtK1dzxiDsLSzRFXX8l1R6jdt27323cL+PuJ9Jdc3fdT9vx9Ef0Htk+7Ma+uRgcI3jxC8EbJvYId3n0B3E3lvX74O1pvc/dntr/C3aiKApV4CJkhRBhmmEe5jFkIc4ikag4iaJM/QJ2P4ItfX56dx6yqnZaaQF9E7e4sWzOxCwFkcgiSlgEi0zRd0JGs4glbBE/hRs/BWqbMf15/GL/8Be+fD+uYU3gwT3HSxtR3AKxT+Lljn0EMXkexIG7X3kAqdu49M3EErThw2A9QedBbf8xqU9lsocvKIXC/9oojUbSBPI+5lVeU3WFYMXtub/J93BgdR/1vcYS8HTHI9R32/l6pF8/nqkWHR9l4f4Armpbgp+IvsLDD0S6YJglcR4u5jF9IDCZhYVMkpDRBwMRUMXydd7lL/8CXsOa/PUKAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=86348dcec3db0310a97ff54d0501311a"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Notification">0d8dd9f10f11101051218e8ebc767e27</action_type>
+        <action_type_parent display_value="Send Notification">7eda5d710f11101051218e8ebc767ec1</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>0d8dd9f10f11101051218e8ebc767e27</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">fd344dcec3db0310a97ff54d050131d6</flow>
+        <generation_source/>
+        <order>15</order>
+        <parent_ui_id>069f9300-eeb8-4267-b29a-417bd8bce4b1</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:16</sys_created_on>
+        <sys_id>8a348dcec3db0310a97ff54d0501311c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:16</sys_updated_on>
+        <ui_id>4f902b28-9359-4cf5-af34-0a1033f31733</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9WWXU/cOhCG/0qV680qTrKbLHctCKlSD5WA9gZV1sQeg1Xno46zhbPiv3ecZL9goaU9HKmXnvHYM+/ME+dqFWgZHAWpzKVcKBYpxljEohmLWY45FiKbZxjnwSSooETaaVHUVtJ6CabzhtXq2CI4lJxNRWctVu7+nvxSt42Bu8/jNrKIG20k+YOjqy+ToAFLJzq0wdHqgetXUzJQoKGt5+ucHubo7hq/lrXoSsqL67Xxwxh5MnrevD8hDwX5dNgkwFuHlUTKQ4FpcRKUUElwtb3bWKho+bEyW8ONrtxQaAm3rf6Xbk5iv08hVSZGETZLPgo0mNUJOLhwthOusxu9ai2wHTSRqKAz7njXNmz42DhdV0OIg8Kso2vTldXZoEiwOWCnH11LSWDjC/WZ0+VUhbq4qb+fr5M81VUvyViiqQWYzQqcs7ronE9nFXT68pDag/mw3miw31hC0+jqmje2Xur+Psq+nF4bWkyVqb9Tmq2+rqYgfKlT6gRMT8l+0ps/g9W+7n/oGAr2d36q9LcO3/s5kizKkkUkwiyeJWEaCQiLXBYhFLGapek8nxcsuJ8E7V17bKBtt4pRq/i3zhc86DcqxXuxe6V5P3A+WFjduLeU3hJHfe4nI1s5e26Qk3g7tztnbvm65TGbz9M04bpSNXc84s7CEk1R119JtceoXfbudxv3y7j7hXTX3F3203Y4/RG9R7YPu7FvzgbHCF78QvCGiT3AXR79RdyNZf05eHta73O3p/b/gp0oikIVuAhZIUSYZpiHeQxZiLNIJCpOoihTv4Hdz2BLn5/enYesqp1WWkDfxC1uCzVPciZikSyyKGERLDJF3wkZzSKWsBSewo0fA7XNmP48frZzOH/beIXx5S/gz2tZk3i2X8zhEkckt2DsE3m+Yx+BTJ4HcuDvdx5C6joufVOxBG34MGBPUPqgtv+Y2Kcy2cMYlELhf3GURiNpEnkf8yqvqrpAsOLm1N/kezgwu4/8XmMJfLrjEfK77Xw94i8fz1SLjo+ycH8AV7UtwU9EX+HDD0W6YJglcR4u5jF9KDCZhYVMkpDRhwMRUMXydd7nLz8AAcyMMP0KAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8a348dcec3db0310a97ff54d0501311c"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Notification">0d8dd9f10f11101051218e8ebc767e27</action_type>
+        <action_type_parent display_value="Send Notification">7eda5d710f11101051218e8ebc767ec1</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>0d8dd9f10f11101051218e8ebc767e27</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">fd344dcec3db0310a97ff54d050131d6</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>f90eca3a-8886-42f6-9967-9818f88f5106</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:16</sys_created_on>
+        <sys_id>c2348dcec3db0310a97ff54d05013119</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:16</sys_updated_on>
+        <ui_id>580f6b36-49ea-4355-81e5-ca71e234e58d</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9WWXU/cOhCG/0qV680qTrKbLHctCKlSD5WA9gZV1sQeg1Xno46zhbPiv3ecZL9goaU9HKmXnvHYM+/ME+dqFWgZHAWpzKVcKBYpxljEohmLWY45FiKbZxjnwSSooETaaVHUVtJ6CabzhtXq2CI4lJxNRWctVu7+nvxSt42Bu8/jNrKIG20k+YOjqy+ToAFLJzq0wdHqgetXUzJQoKGt5+ucHubo7hq/lrXoSsqL67Xxwxh5MnrevD8hDwX5dNgkwFuHlUTKQ4FpcRKUUElwtb3bWKho+bEyW8ONrtxQaAm3rf6Xbk5iv08hVSZGETZLPgo0mNUJOLhwthOusxu9ai2wHTSRqKAz7njXNmz42DhdV0OIg8Kso2vTldXZoEiwOWCnH11LSWDjC/WZ0+VUhbq4qb+fr5M81VUvyViiqQWYzQqcs7ronE9nFXT68pDag/mw3miw31hC0+jqmje2Xur+Psq+nF4bWkyVqb9Tmq2+rqYgfKlT6gRMT8l+0ps/g9W+7n/oGAr2d36q9LcO3/s5kizKkkUkwiyeJWEaCQiLXBYhFLGapek8nxcsuJ8E7V17bKBtt4pRq/i3zhc86DcqxXuxe6V5P3A+WFjduLeU3hJHfe4nI1s5e26Qk3g7tztnbvm65TGbz9M04bpSNXc84s7CEk1R119JtceoXfbudxv3y7j7hXTX3F3203Y4/RG9R7YPu7FvzgbHCF78QvCGiT3AXR79RdyNZf05eHta73O3p/b/gp0oikIVuAhZIUSYZpiHeQxZiLNIJCpOoihTv4Hdz2BLn5/enYesqp1WWkDfxC1uCzVPciZikSyyKGERLDJF3wkZzSKWsBSewo0fA7XNmP48frZzOH/beIXx5S/gz2tZk3i2X8zhEkckt2DsE3m+Yx+BTJ4HcuDvdx5C6joufVOxBG34MGBPUPqgtv+Y2Kcy2cMYlELhf3GURiNpEnkf8yqvqrpAsOLm1N/kezgwu4/8XmMJfLrjEfK77Xw94i8fz1SLjo+ycH8AV7UtwU9EX+HDD0W6YJglcR4u5jF9KDCZhYVMkpDRhwMRUMXydd7nLz8AAcyMMP0KAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c2348dcec3db0310a97ff54d05013119"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">fd344dcec3db0310a97ff54d050131d6</flow>
+        <generation_source/>
+        <order>13</order>
+        <parent_ui_id>3ac7d338-0301-4042-b72e-9ece327a8506</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:16</sys_created_on>
+        <sys_id>c6348dcec3db0310a97ff54d0501311b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:16</sys_updated_on>
+        <ui_id>e66331b6-d57c-4e7e-9df0-6a45ff365b5f</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1YbU/bPBT9K8ifSx+naULKN0aFtOl5NgnYvlAUubbTenOdLIkZfar+993EzstS6NpRJJj4gvC9fjn3+Jzazs0KCYZOER/6rgd/TiIXOwMHB9wPAjrChAa+7w1d1EOKLDj0JEmSxndEhiknWawgAQ1dZOBfJrJEkuWXJkLnQrKUK3R6c9tDCUlhlpyn6HTVSe0KQ5Ipl9D1zOI4uqxwPAowXyZFIstToWa2/a+d5qoKxikrYA16iN/nXDEOeCIiM95DC6IYyeN0WUdgavZJySYwFyo3BS/IfSb+h/UcHxcdIw4lUstG3QwtUyYcjUlOAImmuU5r4mJBeWbIYTwiWubn7Zjp8CnJBRRZDsnJVFajY6kX6qNhBNUTtDZGZwCCJ0WlBXRbR3Q1j39cVigvhCpJsUkZUyLrFsmBuqnOCzwrpMV1h2UT2eCZS76AFcMF7BNEwmKzRLkKgF70ZxIa/UjGPwBdJmaqT2hRYR92gPQvID4uw19IKopy/4NpYHCx3Gclvmv+vtCRP5j6IxywYxbh6fEwcL1jQjk+5r7jcY/51HNctO6hbJmdS5JlDVGwQ+F3XZRpaLMEhYbjYghNRZKfAag7brlY96yLsBMN+Gg0wFMHYxfjwKM4cPnUPfFPXMKCB0QaCS5Zy0RVYtNMrcx+ptoB1YapLiysx+BaS5XNsOz0q63K8UcfTeLg1gowfk3egsWfYq3nccz+6jcU/MYCdKvYeOsg+RrrVG1xQDgXWamMR53Q6rGfI3YAWTnig0HZNUQX/J/4wX3zw9/vh5Ngm9QobiSVcgrCaBlhtTqHzc85C50+1SnQlK/XB7hk7QCpUv9lhamL0eqdxVSXeyFYR/Bjmzl6P24Uj7cr3uhiF8G7gze5v0i5U2+btqJRIyWmgSRQd1vwE2SwT9DpBKlY8QnqTVDRKyy0VYahByCsE2VstVqvTUSnxE7gtJrNaEaWWdkzo3POtDTRXyJhKX4bP4TfduCk8ttY86OxIWWTpuoZU+E0vIiNs+bKdihn+udatM8c72BnzvA1nThPfd0836MlrK/14DD4oXiGV8lwq/54S2z1xYrGiomigqxlT/M44NmZWn6+eeBw6gNkKLIkapbGOumDssiMp+v17aaNnjjbfhbcgYL6yAPnZL+jxFqx+dRgB7Vt2HygsElrweGhDsFXdut7mR48vN2mdOv1ijbaMmw2BrsPB47vD4duKFQUh3mIwzwld1xO4/ib+XrSMdF1mX5Xp/dzxQ5IK1dcW6gd5NYHZfOhZ085rPPscfY8gowhHtT/m/pfjPpvfwLowswHShYAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c6348dcec3db0310a97ff54d0501311b"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=fd344dcec3db0310a97ff54d050131d6"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=fd344dcec3db0310a97ff54d050131d6^sys_idNOT IN02348dcec3db0310a97ff54d0501310e,02348dcec3db0310a97ff54d05013113,06348dcec3db0310a97ff54d0501310a,06348dcec3db0310a97ff54d0501310f,06348dcec3db0310a97ff54d05013114,0a348dcec3db0310a97ff54d0501310b,0a348dcec3db0310a97ff54d05013110,0a348dcec3db0310a97ff54d05013115,0e348dcec3db0310a97ff54d0501310c,0e348dcec3db0310a97ff54d05013111,82348dcec3db0310a97ff54d05013107,86348dcec3db0310a97ff54d05013108,8a348dcec3db0310a97ff54d05013105"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">fd344dcec3db0310a97ff54d0501314b</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">fd344dcec3db0310a97ff54d050131d6</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>10</order>
+        <outputs_assigned/>
+        <parent_ui_id>fedba023-7ea3-4e89-bf93-db3b3d11d297</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:15</sys_created_on>
+        <sys_id>02348dcec3db0310a97ff54d0501310e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:15</sys_updated_on>
+        <ui_id>6264f6fb-74c7-400a-a1f9-c597194cfbc1</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">b5344dcec3db0310a97ff54d05013156</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">fd344dcec3db0310a97ff54d050131d6</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>16</order>
+        <outputs_assigned/>
+        <parent_ui_id>069f9300-eeb8-4267-b29a-417bd8bce4b1</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:16</sys_created_on>
+        <sys_id>02348dcec3db0310a97ff54d05013113</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:16</sys_updated_on>
+        <ui_id>c2235fd1-01ff-4d6e-bb9f-db6a38e2c3e9</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">2f579806c3970310a97ff54d05013151</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">fd344dcec3db0310a97ff54d050131d6</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id>826f7dbf-f299-4cbb-b428-76981f55c94c</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:15</sys_created_on>
+        <sys_id>06348dcec3db0310a97ff54d0501310a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:15</sys_updated_on>
+        <ui_id>f90eca3a-8886-42f6-9967-9818f88f5106</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8lYJnW9DDMirfDAcBCrQN0AS5tIGwIimbKCWqfMRRBf97l3rYRuKirxx7M4e7y5nhUO6IcrZx1typtTFiW5PV54cZEbXH8HdHaqg4WRGqaiasUDWZkUeQzmNdx7Ms4ixL5lGcFvNFTMM5lGk2BwolXYSUl5AG0DRaYU9uLFh+OHxxYZiwAeUM5zFhGgnt/SuPpTshmeajpAY0KrFck1X3bEswPDWDtEyjMKVJvEziMIzfLqJimRRRzBLgiyUOlFBwiaWbMy8u2GPbxkPGalFvx/X7sfV2ApVmnkoczgh/srxmSHlVgjR8RiqoGVilW7Ky2iGgObCbWrbHip2oLU4jvvbJiO/cTwpDX1ly1EX5sHtc5qPHA1xegQWk4qh1eiylOyUoN4MjDB120m7OsaHgpulV9i0WCjl1K+mq+uNgBjkOmK4UEWeQBG+8Us99FFLe7tT+08TyWtS9K+OmVBTkcQUWvSuc9Xw6wiWvcFBe4YWjo7m/ddE3I5cq2EpcBKVUezzU5zoA6okHaCwE14hf9fA9aOFVfMAx2IxZMLmhWjSTtv5wcpgR05qNBGNOGtHc/JvzDAfFo7Z8sMe39IPWePAjH2UcZi9fVN4Dp2e1/unLWP9tuMsQyiij0eVwQ3Ip3G+GzL6M+MT3T3Ie/SLnI/JbQU/T/zn/55x7mgUYQfP+W4/j/KfmFYP+4AM9HHo0mwqD3O489m76h/EbLSZK0HNor/RXr+qEHX4AR6hMT6sGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">ad371406c3970310a97ff54d050131f8</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">fd344dcec3db0310a97ff54d050131d6</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Parallel Branch">a1168de173311300b61e66476bf6a7d0</logic_definition>
+        <order>11</order>
+        <outputs_assigned/>
+        <parent_ui_id>15f7a0c6-4199-46cc-b2e8-a9c9eef5f96e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:15</sys_created_on>
+        <sys_id>06348dcec3db0310a97ff54d0501310f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:15</sys_updated_on>
+        <ui_id>f00b58f7-c282-4d80-b6f5-90731858cf0e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">45f71c46c3970310a97ff54d05013122</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">fd344dcec3db0310a97ff54d050131d6</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>17</order>
+        <outputs_assigned/>
+        <parent_ui_id>3ac7d338-0301-4042-b72e-9ece327a8506</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:16</sys_created_on>
+        <sys_id>06348dcec3db0310a97ff54d05013114</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:16</sys_updated_on>
+        <ui_id>9df4ccf7-7577-41f6-876c-e679aa3c8613</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8lYJn2ZAsS6l9CxwEKNA2QBPk0gbCig+bKEWqJBVHNfzvXephG4nRZ469icPd5cxoKO2IaXzdeHdnLp2Ta02Wnx8iInXA8HlHNFScLAk1mkkvjSYReQTVBGy343mepkmZT1h2QSdzfsEnCybiSQ7zTIg0z8pMTKGurcGewnnwfL//0sRxyihoypXiDAcy6WoF7f1rz6UbqZjlg6gaLGrx3JLl7tmWZHjsAjKRJXFG01mezuJ49naOFNIymbEU+DzHgQpKrrB0deLGGYN8WwfIeSv1eli/H1pvR9BYFqjM4ojwJ881Q8pLAcrxiFSgGXhjW7L0tkHAcmA3WrWHio3UHqeRUPvk5HceJsVxqBQcdVHe7x6WxWByD4sr8IBUGuobO5TSjZGUu94RxgU0yq9Osb7gpu5Udi0eSjV2G9VU+mNvBjkMGN8pIo1DErwOSgP3QYi43Zjtp5HltdSdK8OmMhTUYQUevSsbH/jsCFe8wkFFhTlAR4sQBtk1I5dqula4mApltnhoSPYUaCA+RWNheo34VQffg5VBxQccg82YBVc4amU9ausOJ/uIuNatFDh31IjmFt+awLBXPGgrentCSzfoEg9+5IOMffTyThUdcLxYP7kbfx9vEYNIFjQ5H29Iz8X7TZ/alyEfGf9J0pNfJH1AfivqWfY/6f+c9ECzBCdp0X3vcVz42Lxi1B9CpPtDD2ZT6ZDbXcDejX+ZsNFioiQ9hbbGfg2qjtj+BzEEXSivBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">31344dcec3db0310a97ff54d0501313a</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">fd344dcec3db0310a97ff54d050131d6</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <parent_ui_id>f90eca3a-8886-42f6-9967-9818f88f5106</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:15</sys_created_on>
+        <sys_id>0a348dcec3db0310a97ff54d0501310b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:15</sys_updated_on>
+        <ui_id>fed5881b-8a03-4359-96c1-ed73790bd42e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">21371406c3970310a97ff54d050131fa</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">fd344dcec3db0310a97ff54d050131d6</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>11➛12</order>
+        <outputs_assigned/>
+        <parent_ui_id>f00b58f7-c282-4d80-b6f5-90731858cf0e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:15</sys_created_on>
+        <sys_id>0a348dcec3db0310a97ff54d05013110</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:15</sys_updated_on>
+        <ui_id>3ac7d338-0301-4042-b72e-9ece327a8506</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K0HPxthxE9a8lZRCYVthLX3ZirmW5ERMljx9JPVM/vuu/JGEJmwt7ePerKP7cc71uXZLtHe1d/ZBX1krVoosvj9FRKiA4XNLFFScLAjVigkntCIR2YD0AWvbpeHgOMvTmHpjuHKxM7DhMndNzXe7Hz5JMiaU40ZBSAaJ6UzYWkLz+L4qdC0kw+CecA0GeWIEWbQvrgTDJpcwK2dpMqPZdJ5Nk2T66SIt5lmRTlkG/GKOBSUUXGLo8kjpGfGBE0LWGaFWw/nzkHo/gtqwQGWaRIQ/O64YRxIlSMsjUoFi4LRpyMIZjwCqZ3dKNvuINWrFaiTEPlvxm4dKSRIiS466KO9v98d8GGkPl9fgAKl46rwZQulaC8ptPxHGS/DSLY+xPuCu7lR2KQ4KOWZr6Sv1tR8G2RcY3yAi3iIJXgelgfsgpLxf6+23keWNUN1UhkupKb7I8QQOZ1d4F/i0hEteYaG8grrGiea10RvRJSOXKl5JPMSl1FtsGlwbAw3EYxwsxDeIX3fwIxgRVHzBMpiMXrC5pUbUo7auOdlFxDZ2KcHag0Ycbv7LB4a94kFb3o8npHSFrrDxhg8ydtHpvuQdcFia22MfT3qjTzpTnWzG30LfZv8ygTK9pOl5+0N2zv6T3tWnSzAqessmpP/YhAF51SrMZv834d2bEGgWYAXNu289lgsfow9chadg+b7pfthUWOT2ELDb8Q8TLhp0lKDH0Fabn0HVAdv9AbKcZeKrBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">b9344dcec3db0310a97ff54d0501315b</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">fd344dcec3db0310a97ff54d050131d6</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>19</order>
+        <outputs_assigned/>
+        <parent_ui_id>9df4ccf7-7577-41f6-876c-e679aa3c8613</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:16</sys_created_on>
+        <sys_id>0a348dcec3db0310a97ff54d05013115</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:16</sys_updated_on>
+        <ui_id>b4d0bfab-b9f9-46bc-b8f5-0a7a66e47a59</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">aac71846c3970310a97ff54d05013116</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">fd344dcec3db0310a97ff54d050131d6</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <parent_ui_id>826f7dbf-f299-4cbb-b428-76981f55c94c</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:15</sys_created_on>
+        <sys_id>0e348dcec3db0310a97ff54d0501310c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:15</sys_updated_on>
+        <ui_id>fedba023-7ea3-4e89-bf93-db3b3d11d297</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8lYJnWdDDMirfAgcBCrQN0AS5tIGwIimbKEWqJBVHFfzvXerhGInRZ469icPd5cxoKPVEt65pnb3VF9aKrSLrz/cBEcpj+NwTBTUna0K1YsIJrUhAHkC2Hut7nucxZ3m6iJOsXCwTGi2gyvIFUKjoMqK8giyEpjEaewrrwPHD4UsbRSmjoCiXkjMcyIRtJHR3rz2X7oRkhk+iGjCoxXFD1v2zLcHw2ByyKoujjKbJKk2iKHm7jMtVWsYJS4EvVzhQQskllm5O3DhjkOsaD1lnhNpO6/dT680MasM8lSQKCH90XDGkvK5AWh6QGhQDp01H1s60CBgO7FrJ7lixE8rhNOJrH634zv2kKPKVFUddlI+7x2UxmTzC1SU4QCotda2ZSulOC8rt6AhDi1vpNqfYWHDdDCqHFgelnLu1bGv1cTSDHAfM7xSR1iIJ3nilnvskpLrZ6f2nmeWVUIMr06bUFORxBQ69K1vn+fSES17joKLGHKCjhQ+DGJqRSx1uJS7CSuo9HuqTHQL1xEM0FsIrxC8H+A6M8Co+4BhsxizYwlIjmlnbcDg5BMR2diPB2ieNaG7xrfUMR8WTtmK0x7cMgy7w4Ac+yTgEL+9UMQBPF+snd+Pv411FUMU5jc/HG9Jz8X4zpvZlyGfGf5L0+BdJn5DfinqW/U/6Pyfd0yzBCloM33sc5z82rxj1ex/p8dCj2VRY5HbrsXfzX8ZvdJgoQU+hvTZfvaon7PADTjJ5tq8GAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">77a71446c3970310a97ff54d05013152</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">fd344dcec3db0310a97ff54d050131d6</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>14</order>
+        <outputs_assigned/>
+        <parent_ui_id>3ac7d338-0301-4042-b72e-9ece327a8506</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:16</sys_created_on>
+        <sys_id>0e348dcec3db0310a97ff54d05013111</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:16</sys_updated_on>
+        <ui_id>069f9300-eeb8-4267-b29a-417bd8bce4b1</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8lYJnWZAsS6l9MxwEKNA2QBPk0gbCio+YKCWqJBVHFfzvXephG4mLvnLszRzuLmeGQ7kjunF14+ytXlsrHyqy+nwfEFl5DH93pIKSkxWhumLSSV2RgDyCajzWdTzLkiQushlLL+hswS/4bMlENMtgkQqRZGmRihDq2mjsya0Dx/f7L00UJWxAOcN5TNpaQXv3ymPpVipm+CipBoNKHDdk1T3bkgxPXUIq0jhKaTLPknkUzd8ukEFSxHOWAF9kOFBBwRWWbk68OGOPa2sPWWdk9TCu34+tNxOoDfNU5lFA+JPjFUPKKwHK8oCUUDFw2rRk5UyDgOHArivVHiq2snI4jfjaJyu/cz8pinyl4KiL8mH3sMxHjwdYXIIDpNJQ15ixlG61pNwOjjAuoFFuc4oNBdd1r7JvcVCoqVurpqw+DmaQw4DpShFpLJLgtVfquY9CxM1W7z5NLK9k1bsybipNQR1W4NC7onGeT0e44iUOyku8cHQ097cu+2bkUoYPChehUHqHh/pch0A98RCNhfAK8csevgMjvYoPOAabMQs2t9TIetLWH072AbGt3Siw9qgRzc2/NZ7hoHjUlg/2+JZ+0BoPfuSjjH3w8kXlPXB8Vuufvoz134ZbRCDiJY3PhxuSc+F+M2T2ZcQnvn+S8/gXOR+R3wp6mv7P+T/n3NMswEqa9996HOc/Na8Y9Hsf6OHQg9lUWuR267F30z+M32gxUZKeQjttvnpVR2z/A3+DV9SrBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">fa769882c3970310a97ff54d050131df</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">fd344dcec3db0310a97ff54d050131d6</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Parallel Branch">a1168de173311300b61e66476bf6a7d0</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id>15f7a0c6-4199-46cc-b2e8-a9c9eef5f96e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:15</sys_created_on>
+        <sys_id>82348dcec3db0310a97ff54d05013107</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:15</sys_updated_on>
+        <ui_id>c42bc2d1-4a52-46c1-8e8c-4af0b967c721</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">7e769882c3970310a97ff54d050131e0</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">fd344dcec3db0310a97ff54d050131d6</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2➛3</order>
+        <outputs_assigned/>
+        <parent_ui_id>c42bc2d1-4a52-46c1-8e8c-4af0b967c721</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:15</sys_created_on>
+        <sys_id>86348dcec3db0310a97ff54d05013108</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:15</sys_updated_on>
+        <ui_id>826f7dbf-f299-4cbb-b428-76981f55c94c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8FYNnQZCs2Gh8C2wECNA2QBPk0gbCiqRsohSp8mFHFfzvXephG7WLNm2PuYnD3eHMaii1RHtXe2cf9Y21Yq3I4vNzRIQKGD63REHFyYJQrZhwQisSkS1IH7C2XRoOjrM8jak3hisXOwNbLnPX1Hy//+KTJGNMV9w6QbGTCVtLaJ7+moBuhGRY18uswaA6xw1ZtD9tCYb81zArZ2kyo9l0nk2TZPruKi3mWZFOWQb8ao6EEgousXR54u+C5SAHIeuMUOth/X5ofRhBbViQMk0iwl8cV4yjiBKk5RGpQDFw2jRk4YxHAI2zeyWbQ8VGKIdsJNS+WPGdB6YkCZUlR1+U97uHZT5Ms4fLFThAKZ46b4ZSutGCcttPhPESvHTLU6wvuK87l12Lg0KO3Vr6Sn3sh0EOBOPLQ8RbFMHr4DRoH4yUDxu9+zSqvBWqm8qwKTUFeViBw9kV3gU9LeGSV0iUV1DXONG8NnorumbUUsVriYu4lHqHh4asxkCD8BgHC/Et4qsOfgIjgosPSIPNmAWbW2pEPXrrDif7iNjGLiVYe/SIw82/+aCwdzx4y/vxhJaO6AYP3vLBxj46vyV5BxyvymqI8KSP96TL09l9+EXV60JfJlCm1zS9HHrILoV+0mf5PPqjj9fkP/1N/gfkjy7AbPaW/3/Of5BZgBU0777rSBc+Qf/xAjyHoPeHHoZNhUVtjwG7G/8mYaPBRAl6Cu20+RpcHbH9D6GkQlWXBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">34761882c3970310a97ff54d0501316e</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Travel_Cancellation_Notification">fd344dcec3db0310a97ff54d050131d6</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Do the following in Parallel">5d31e5dedfe50300b61ecae83df26326</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:15</sys_created_on>
+        <sys_id>8a348dcec3db0310a97ff54d05013105</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:15</sys_updated_on>
+        <ui_id>15f7a0c6-4199-46cc-b2e8-a9c9eef5f96e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=fd344dcec3db0310a97ff54d050131d6"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=fd344dcec3db0310a97ff54d050131d6"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_fd344dcec3db0310a97ff54d050131d6</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:15</sys_created_on>
+        <sys_id>0e344dcec3db0310a97ff54d050131ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Info travel Booking" source="x_2166443_info_t_0">95ed2831c3c38310a97ff54d05013196</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_fd344dcec3db0310a97ff54d050131d6</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:15</sys_created_on>
+        <sys_id>ca344dcec3db0310a97ff54d050131fa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Info travel Booking" source="x_2166443_info_t_0">95ed2831c3c38310a97ff54d05013196</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_fd344dcec3db0310a97ff54d050131d6"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_fd344dcec3db0310a97ff54d050131d6"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>f0d5d042c3970310a97ff54d050131c4</sys_id>
+        <latest_snapshot>fd344dcec3db0310a97ff54d050131d6</latest_snapshot>
+        <compiler_build>glide-zurich-07-01-2025__patch10-05-22-2026_06-12-2026_2311.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=f0d5d042c3970310a97ff54d050131c4^sys_idNOT IN52348dcec3db0310a97ff54d0501316f"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"52348dcec3db0310a97ff54d0501316f","name":"plan","plan_signature":null}}</plan>
+        <plan_id>f0d5d042c3970310a97ff54d050131c4</plan_id>
+        <snapshot>c7740902c31f0310a97ff54d05013113</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 12:42:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>52348dcec3db0310a97ff54d0501316f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 12:42:16</sys_updated_on>
+        <trigger display_value="">92348dcec3db0310a97ff54d0501316c</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=f0d5d042c3970310a97ff54d050131c4"/>
+</record_update>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="5cceac39c3c38310a97ff54d05013199" extends="task" label="TravelBooking" max_length="40" name="x_2166443_info_t_0_travelbooking" type="collection">
+        <element label="From" max_length="32" name="from" reference="cmn_location" type="reference"/>
+        <element label="First Name" max_length="40" name="first_name" type="string"/>
+        <element label="Return" max_length="40" name="return" type="boolean"/>
+        <element choice="1" label="Travel Type" max_length="40" name="travel_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Domestic" sequence="1" value="domestic"/>
+                <element inactive_on_update="false" label="International" sequence="0" value="international"/>
+            </choice>
+        </element>
+        <element label="caller" max_length="32" name="caller" reference="sys_user" type="reference"/>
+        <element label="Last Name" max_length="40" name="last_name" type="string"/>
+        <element label="Passport Details" max_length="40" name="passport_details" type="string"/>
+        <element label="ReturnDate" max_length="40" name="returndate" type="glide_date"/>
+        <element label="StartDate" max_length="40" name="startdate" type="glide_date"/>
+        <element label="Visa Details" max_length="40" name="visa_details" type="string"/>
+        <element label="Destination" max_length="32" name="destination" reference="cmn_location" type="reference"/>
+    </element>
+</database>

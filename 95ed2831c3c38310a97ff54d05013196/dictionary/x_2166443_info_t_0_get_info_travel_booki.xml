@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="7c798169c3634f50a97ff54d050131a6" extends="sys_import_set_row" label="get_info_travel_booking" max_length="40" name="x_2166443_info_t_0_get_info_travel_booki" type="collection"/>
+</database>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>visa_details</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 03:07:46</sys_created_on>
+        <sys_id>2f371a1ec3c3c710a97ff54d05013184</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>visa_details</sys_name>
+        <sys_package display_value="Info travel Booking" source="x_2166443_info_t_0">95ed2831c3c38310a97ff54d05013196</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_update_name>sys_ui_policy_action_2f371a1ec3c3c710a97ff54d05013184</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-03 03:07:46</sys_updated_on>
+        <table>x_2166443_info_t_0_travelbooking</table>
+        <ui_policy display_value="Hide VISA &amp; Passport details">0ad61edac3c3c710a97ff54d050131b2</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="DELETE" query="documentkey=2f371a1ec3c3c710a97ff54d05013184"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</application>
+        <file_path/>
+        <instance_id>27120471eb952a9c3a48f459bad0cd4b</instance_id>
+        <instance_name>dev343148</instance_name>
+        <name>sys_ui_policy_action_2f371a1ec3c3c710a97ff54d05013184</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>false</cleared><disabled>ignore</disabled><field>visa_details</field><field_message/><field_message_type>none</field_message_type><mandatory>ignore</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-03 03:07:46</sys_created_on><sys_id>2f371a1ec3c3c710a97ff54d05013184</sys_id><sys_mod_count>0</sys_mod_count><sys_name>visa_details</sys_name><sys_package display_value="Info travel Booking" source="x_2166443_info_t_0">95ed2831c3c38310a97ff54d05013196</sys_package><sys_policy/><sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope><sys_update_name>sys_ui_policy_action_2f371a1ec3c3c710a97ff54d05013184</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-03 03:07:46</sys_updated_on><table>x_2166443_info_t_0_travelbooking</table><ui_policy display_value="Hide VISA &amp; Passport details">0ad61edac3c3c710a97ff54d050131b2</ui_policy><value/><value_action>ignore</value_action><visible>true</visible></sys_ui_policy_action><sys_translated_text action="delete_multiple" query="documentkey=2f371a1ec3c3c710a97ff54d05013184"/></record_update>]]></payload>
+        <payload_hash>1597276737</payload_hash>
+        <record_name>visa_details</record_name>
+        <reverted_from/>
+        <source>51ed6831c3c38310a97ff54d0501317d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 03:07:46</sys_created_on>
+        <sys_id>6b371a1ec3c3c710a97ff54d05013188</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0653c9d8c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-03 03:07:46</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>2b371a1e2ec3c71011f0f257ed269c87</update_guid>
+        <update_guid_history>2b371a1e2ec3c71011f0f257ed269c87:1597276737</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 03:12:27</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>0697f483fb8640128285912a44af9ec4</sys_id>
+        <sys_metadata>2f371a1ec3c3c710a97ff54d05013184</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>visa_details</sys_name>
+        <sys_package display_value="Info travel Booking" source="x_2166443_info_t_0">95ed2831c3c38310a97ff54d05013196</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_scope_delete display_value="">09a56171965d4def8145cb14d7f3e969</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_2f371a1ec3c3c710a97ff54d05013184</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_2f371a1ec3c3c710a97ff54d05013184">6b371a1ec3c3c710a97ff54d05013188</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-03 03:12:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message">
+    <sys_rest_message action="DELETE">
+        <access>package_private</access>
+        <authentication_type>no_authentication</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <description/>
+        <name>WeatherAPI</name>
+        <oauth2_profile/>
+        <protocol_name/>
+        <rest_endpoint>https://api.weatherapi.com/v1/current.json?key=b912559c7d1d4155b9842251231701&amp;q=paris  </rest_endpoint>
+        <sys_class_name>sys_rest_message</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 07:33:09</sys_created_on>
+        <sys_id>09a39e7cc36bc750a97ff54d05013157</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WeatherAPI</sys_name>
+        <sys_package display_value="Info travel Booking" source="x_2166443_info_t_0">95ed2831c3c38310a97ff54d05013196</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_update_name>sys_rest_message_09a39e7cc36bc750a97ff54d05013157</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 07:33:09</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</application>
+        <file_path/>
+        <instance_id>27120471eb952a9c3a48f459bad0cd4b</instance_id>
+        <instance_name>dev343148</instance_name>
+        <name>sys_rest_message_09a39e7cc36bc750a97ff54d05013157</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message"><sys_rest_message action="INSERT_OR_UPDATE"><access>package_private</access><authentication_type>no_authentication</authentication_type><basic_auth_password/><basic_auth_profile/><basic_auth_user/><description/><name>WeatherAPI</name><oauth2_profile/><protocol_name/><rest_endpoint>https://api.weatherapi.com/v1/current.json?key=b912559c7d1d4155b9842251231701&amp;q=paris  </rest_endpoint><sys_class_name>sys_rest_message</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-23 07:33:09</sys_created_on><sys_id>09a39e7cc36bc750a97ff54d05013157</sys_id><sys_mod_count>0</sys_mod_count><sys_name>WeatherAPI</sys_name><sys_package display_value="Info travel Booking" source="x_2166443_info_t_0">95ed2831c3c38310a97ff54d05013196</sys_package><sys_policy/><sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope><sys_update_name>sys_rest_message_09a39e7cc36bc750a97ff54d05013157</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-23 07:33:09</sys_updated_on><use_basic_auth>false</use_basic_auth><use_mutual_auth>false</use_mutual_auth></sys_rest_message></record_update>]]></payload>
+        <payload_hash>-452752783</payload_hash>
+        <record_name>WeatherAPI</record_name>
+        <reverted_from/>
+        <source>51ed6831c3c38310a97ff54d0501317d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 07:33:09</sys_created_on>
+        <sys_id>3dc3d2bcc36bc750a97ff54d05013153</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0cd2ec5d80000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 07:33:09</sys_updated_on>
+        <type>REST Message</type>
+        <update_guid>f9c3d2bcdf6bc7500f24f7bdd78bf852</update_guid>
+        <update_guid_history>f9c3d2bcdf6bc7500f24f7bdd78bf852:-452752783</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 09:04:25</sys_created_on>
+        <sys_db_object display_value="" name="sys_rest_message">sys_rest_message</sys_db_object>
+        <sys_id>93e04a35da41419eacd1fecbb91afee4</sys_id>
+        <sys_metadata>09a39e7cc36bc750a97ff54d05013157</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WeatherAPI</sys_name>
+        <sys_package display_value="Info travel Booking" source="x_2166443_info_t_0">95ed2831c3c38310a97ff54d05013196</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_scope_delete display_value="">09a56171965d4def8145cb14d7f3e969</sys_scope_delete>
+        <sys_update_name>sys_rest_message_09a39e7cc36bc750a97ff54d05013157</sys_update_name>
+        <sys_update_version display_value="sys_rest_message_09a39e7cc36bc750a97ff54d05013157">3dc3d2bcc36bc750a97ff54d05013153</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 09:04:25</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

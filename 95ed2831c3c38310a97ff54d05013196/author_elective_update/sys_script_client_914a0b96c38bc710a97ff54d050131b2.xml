@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>short_description</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Tostring ShortDescription</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+  var sd = g_form.getValue('short_description');
+
+  var sdToString = toTitleCase(sd);
+
+  control.setValue(sdToString);
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 06:54:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>914a0b96c38bc710a97ff54d050131b2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Tostring ShortDescription</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Info travel Booking" source="x_2166443_info_t_0">95ed2831c3c38310a97ff54d05013196</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_update_name>sys_script_client_914a0b96c38bc710a97ff54d050131b2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-03 06:55:58</sys_updated_on>
+        <table>x_2166443_employ_0_employee_access_request</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</application>
+        <file_path/>
+        <instance_id>27120471eb952a9c3a48f459bad0cd4b</instance_id>
+        <instance_name>dev343148</instance_name>
+        <name>sys_script_client_914a0b96c38bc710a97ff54d050131b2</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;short_description&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Tostring ShortDescription&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+  var sd = g_form.getValue('short_description');
+
+  var sdToString = toTitleCase(sd);
+
+  control.setValue(sdToString);
+   
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-03 06:54:11&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;914a0b96c38bc710a97ff54d050131b2&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Tostring ShortDescription&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Info travel Booking" source="x_2166443_info_t_0"&gt;95ed2831c3c38310a97ff54d05013196&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Info travel Booking"&gt;95ed2831c3c38310a97ff54d05013196&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_914a0b96c38bc710a97ff54d050131b2&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-03 06:55:58&lt;/sys_updated_on&gt;&lt;table&gt;x_2166443_employ_0_employee_access_request&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-383720061</payload_hash>
+        <record_name>Tostring ShortDescription</record_name>
+        <reverted_from/>
+        <source>51ed6831c3c38310a97ff54d0501317d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 06:55:58</sys_created_on>
+        <sys_id>d67b035ac38bc710a97ff54d05013169</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0660d8b5b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-03 06:55:58</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>d27b8b1a618bc71034bc22c1a1cbd3b9</update_guid>
+        <update_guid_history>d27b8b1a618bc71034bc22c1a1cbd3b9:-383720061,4c1bc7924d8bc710a157854adee0825d:433196937</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 07:03:32</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>0a0a84e836e748248c1415c528fe4dc1</sys_id>
+        <sys_metadata>914a0b96c38bc710a97ff54d050131b2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Tostring ShortDescription</sys_name>
+        <sys_package display_value="Info travel Booking" source="x_2166443_info_t_0">95ed2831c3c38310a97ff54d05013196</sys_package>
+        <sys_parent display_value="Employee Access Request">067d74e5c3070310a97ff54d050131c0</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_scope_delete display_value="">09a56171965d4def8145cb14d7f3e969</sys_scope_delete>
+        <sys_update_name>sys_script_client_914a0b96c38bc710a97ff54d050131b2</sys_update_name>
+        <sys_update_version display_value="sys_script_client_914a0b96c38bc710a97ff54d050131b2">d67b035ac38bc710a97ff54d05013169</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-03 07:03:32</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

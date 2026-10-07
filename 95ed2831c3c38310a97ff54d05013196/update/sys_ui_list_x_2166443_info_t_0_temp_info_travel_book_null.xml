@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_2166443_info_t_0_temp_info_travel_book" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_short_description</element>
+            <list_id display_value="x_2166443_info_t_0_temp_info_travel_book" element="NULL" name="x_2166443_info_t_0_temp_info_travel_book" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">966ac5e9c3634f50a97ff54d05013162</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-25 10:08:03</sys_created_on>
+            <sys_id>126ac5e9c3634f50a97ff54d05013165</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-25 10:08:03</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_destination</element>
+            <list_id display_value="x_2166443_info_t_0_temp_info_travel_book" element="NULL" name="x_2166443_info_t_0_temp_info_travel_book" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">966ac5e9c3634f50a97ff54d05013162</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-25 10:08:03</sys_created_on>
+            <sys_id>9e6ac5e9c3634f50a97ff54d05013165</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-25 10:08:03</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_return_date</element>
+            <list_id display_value="x_2166443_info_t_0_temp_info_travel_book" element="NULL" name="x_2166443_info_t_0_temp_info_travel_book" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">966ac5e9c3634f50a97ff54d05013162</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-25 10:08:03</sys_created_on>
+            <sys_id>166ac5e9c3634f50a97ff54d05013166</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-25 10:08:03</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_form</element>
+            <list_id display_value="x_2166443_info_t_0_temp_info_travel_book" element="NULL" name="x_2166443_info_t_0_temp_info_travel_book" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">966ac5e9c3634f50a97ff54d05013162</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-25 10:08:03</sys_created_on>
+            <sys_id>9a6ac5e9c3634f50a97ff54d05013166</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-25 10:08:03</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_start_date</element>
+            <list_id display_value="x_2166443_info_t_0_temp_info_travel_book" element="NULL" name="x_2166443_info_t_0_temp_info_travel_book" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">966ac5e9c3634f50a97ff54d05013162</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-25 10:08:03</sys_created_on>
+            <sys_id>126ac5e9c3634f50a97ff54d05013167</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-25 10:08:03</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_2166443_info_t_0_temp_info_travel_book</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-25 10:08:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>966ac5e9c3634f50a97ff54d05013162</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_2166443_info_t_0_temp_info_travel_book</sys_name>
+            <sys_package display_value="Info travel Booking" source="x_2166443_info_t_0">95ed2831c3c38310a97ff54d05013196</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+            <sys_update_name>sys_ui_list_x_2166443_info_t_0_temp_info_travel_book_null</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-25 10:08:03</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

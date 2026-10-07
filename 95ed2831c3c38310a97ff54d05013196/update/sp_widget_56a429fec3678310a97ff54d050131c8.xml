@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope) {
+
+    var c = this;
+
+    c.form = {
+        caller: {
+            value: ''
+        },
+        from: {
+            value: ''
+        },
+        destination: {
+            value: ''
+        },
+        startdate: '',
+        return_trip: false,
+        returndate: '',
+        short_description: '',
+        travel_type: ''
+    };
+
+    c.errors = {};
+    c.submitting = false;
+    c.success = false;
+    c.serverError = '';
+
+
+    // Return checkbox
+    c.returnChanged = function() {
+
+        if (!c.form.return_trip) {
+            c.form.returndate = '';
+            c.errors.returndate = '';
+        }
+    };
+
+
+    // Validation
+    c.validate = function() {
+
+        c.errors = {};
+
+        var valid = true;
+
+        if (!c.form.caller.value) {
+            c.errors.caller = 'Caller is required.';
+            valid = false;
+        }
+
+        if (!c.form.from.value) {
+            c.errors.from = 'From location is required.';
+            valid = false;
+        }
+
+        if (!c.form.destination.value) {
+            c.errors.destination = 'Destination is required.';
+            valid = false;
+        }
+
+        if (
+            c.form.from.value &&
+            c.form.destination.value &&
+            c.form.from.value === c.form.destination.value
+        ) {
+            c.errors.destination =
+                'Destination cannot be same as From location.';
+            valid = false;
+        }
+
+        if (!c.form.startdate) {
+            c.errors.startdate = 'Start date is required.';
+            valid = false;
+        }
+
+        if (c.form.return_trip) {
+
+            if (!c.form.returndate) {
+
+                c.errors.returndate =
+                    'Return date is required for a return trip.';
+
+                valid = false;
+
+            } else if (
+                c.form.startdate &&
+                c.form.returndate < c.form.startdate
+            ) {
+
+                c.errors.returndate =
+                    'Return date cannot be before start date.';
+
+                valid = false;
+            }
+        }
+
+        if (!c.form.travel_type) {
+            c.errors.travel_type =
+                'Please select travel type.';
+            valid = false;
+        }
+
+        if (!c.form.short_description ||
+            !c.form.short_description.trim()) {
+
+            c.errors.short_description =
+                'Short description is required.';
+
+            valid = false;
+        }
+
+        return valid;
+    };
+
+
+    // Submit
+    c.submitForm = function() {
+
+        c.success = false;
+        c.serverError = '';
+
+        if (!c.validate()) {
+            return;
+        }
+
+        c.submitting = true;
+
+        c.server.get({
+            action: 'createBooking',
+
+            caller: c.form.caller.value,
+
+            from: c.form.from.value,
+
+            destination: c.form.destination.value,
+
+            startdate: c.form.startdate,
+
+            return_trip: c.form.return_trip,
+
+            returndate: c.form.returndate,
+
+            short_description:
+                c.form.short_description.trim(),
+
+            travel_type: c.form.travel_type
+        }).then(function(response) {
+
+            c.submitting = false;
+
+            if (response.data.success) {
+
+                c.success = true;
+                c.bookingNumber =
+                    response.data.number;
+
+                // Clear form
+                c.form = {
+                    caller: {
+                        value: ''
+                    },
+                    from: {
+                        value: ''
+                    },
+                    destination: {
+                        value: ''
+                    },
+                    startdate: '',
+                    return_trip: false,
+                    returndate: '',
+                    short_description: '',
+                    travel_type: ''
+                };
+
+            } else {
+
+                c.serverError =
+                    response.data.error ||
+                    'Unable to create travel booking.';
+
+            }
+
+        }, function() {
+
+            c.submitting = false;
+
+            c.serverError =
+                'Server error occurred while creating the booking.';
+
+        });
+    };
+
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>info_travel_booking</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+    data.success = false;
+
+    if (input && input.action === 'createBooking') {
+
+        var requiredFields = [
+            'caller',
+            'from',
+            'destination',
+            'startdate',
+            'travel_type',
+            'short_description'
+        ];
+
+        // Required field validation
+        for (var i = 0; i < requiredFields.length; i++) {
+
+            var field = requiredFields[i];
+
+            if (!input[field] ||
+                String(input[field]).trim() === '') {
+
+                data.error =
+                    field + ' is required.';
+
+                return;
+            }
+        }
+
+
+        // Validate travel type
+        if (
+            input.travel_type !== 'domestic' &&
+            input.travel_type !== 'international'
+        ) {
+
+            data.error =
+                'Invalid travel type.';
+
+            return;
+        }
+
+
+        // Return trip validation
+        var isReturn =
+            input.return_trip === true ||
+            input.return_trip === 'true';
+
+        if (isReturn && !input.returndate) {
+
+            data.error =
+                'Return date is required for a return trip.';
+
+            return;
+        }
+
+
+        // Return date validation
+        if (
+            isReturn &&
+            input.startdate &&
+            input.returndate < input.startdate
+        ) {
+
+            data.error =
+                'Return date cannot be before start date.';
+
+            return;
+        }
+
+
+        // Validate caller
+        var callerGR = new GlideRecord('sys_user');
+
+        if (!callerGR.get(input.caller)) {
+
+            data.error =
+                'Invalid caller selected.';
+
+            return;
+        }
+
+
+        // Create Travel Booking
+        var booking =
+            new GlideRecord(
+                'x_2166443_info_t_0_travelbooking'
+            );
+
+        booking.initialize();
+
+
+        // Reference fields
+        booking.setValue(
+            'caller',
+            input.caller
+        );
+
+        booking.setValue(
+            'from',
+            input.from
+        );
+
+        booking.setValue(
+            'destination',
+            input.destination
+        );
+
+
+        // Dates
+        booking.setValue(
+            'startdate',
+            input.startdate
+        );
+
+
+        // Return checkbox
+        booking.setValue(
+            'return',
+            isReturn
+        );
+
+
+        // Return date
+        if (isReturn) {
+
+            booking.setValue(
+                'returndate',
+                input.returndate
+            );
+
+        } else {
+
+            booking.setValue(
+                'returndate',
+                ''
+            );
+        }
+
+
+        // Other fields
+        booking.setValue(
+            'short_description',
+            input.short_description
+        );
+
+        booking.setValue(
+            'travel_type',
+            input.travel_type
+        );
+
+
+        // Insert
+        var sysId = booking.insert();
+
+
+        if (!sysId) {
+
+            data.error =
+                'Travel booking could not be created.';
+
+            return;
+        }
+
+
+        // Success
+        data.success = true;
+
+        data.sys_id = sysId;
+
+        data.number =
+            booking.getValue('number');
+    }
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-29 09:15:32</sys_created_on>
+        <sys_id>56a429fec3678310a97ff54d050131c8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>info_travel_booking</sys_name>
+        <sys_package display_value="Info travel Booking" source="x_2166443_info_t_0">95ed2831c3c38310a97ff54d05013196</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_update_name>sp_widget_56a429fec3678310a97ff54d050131c8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-29 09:24:04</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Travel Booking</h3>
+  </div>
+
+  <div class="panel-body">
+
+    <form name="travelForm" ng-submit="c.submitForm()" novalidate>
+
+      <!-- Caller -->
+      <div class="form-group">
+        <label>Caller <span class="text-danger">*</span></label>
+
+        <sn-record-picker
+          field="c.form.caller"
+          table="'sys_user'"
+          display-field="'name'"
+          value-field="'sys_id'"
+          search-fields="'name,email'"
+          page-size="10"
+          placeholder="Select caller">
+        </sn-record-picker>
+
+        <div class="text-danger" ng-if="c.errors.caller">
+          {{c.errors.caller}}
+        </div>
+      </div>
+
+
+      <!-- From -->
+<div class="form-group">
+    <label>From <span class="text-danger">*</span></label>
+
+    <sn-record-picker
+        field="c.form.from"
+        table="'cmn_location'"
+        display-field="'name'"
+        value-field="'sys_id'"
+        search-fields="'name'"
+        page-size="10"
+        placeholder="Select departure location">
+    </sn-record-picker>
+
+    <div class="text-danger" ng-if="c.errors.from">
+        {{c.errors.from}}
+    </div>
+</div>
+
+
+      <!-- Destination -->
+<div class="form-group">
+    <label>Destination <span class="text-danger">*</span></label>
+
+    <sn-record-picker
+        field="c.form.destination"
+        table="'cmn_location'"
+        display-field="'name'"
+        value-field="'sys_id'"
+        search-fields="'name'"
+        page-size="10"
+        placeholder="Select destination">
+    </sn-record-picker>
+
+    <div class="text-danger" ng-if="c.errors.destination">
+        {{c.errors.destination}}
+    </div>
+</div>
+
+      <!-- Start Date -->
+      <div class="form-group">
+        <label>Start Date <span class="text-danger">*</span></label>
+
+        <input
+          type="date"
+          class="form-control"
+          ng-model="c.form.startdate">
+
+        <div class="text-danger" ng-if="c.errors.startdate">
+          {{c.errors.startdate}}
+        </div>
+      </div>
+
+
+      <!-- Return checkbox -->
+      <div class="checkbox">
+        <label>
+          <input
+            type="checkbox"
+            ng-model="c.form.return_trip"
+            ng-change="c.returnChanged()">
+
+          Return Trip
+        </label>
+      </div>
+
+
+      <!-- Return Date -->
+      <div
+        class="form-group"
+        ng-if="c.form.return_trip">
+
+        <label>Return Date <span class="text-danger">*</span></label>
+
+        <input
+          type="date"
+          class="form-control"
+          ng-model="c.form.returndate">
+
+        <div class="text-danger" ng-if="c.errors.returndate">
+          {{c.errors.returndate}}
+        </div>
+      </div>
+
+
+      <!-- Travel Type -->
+      <div class="form-group">
+        <label>Travel Type <span class="text-danger">*</span></label>
+
+        <select
+          class="form-control"
+          ng-model="c.form.travel_type">
+
+          <option value="">-- Select Travel Type --</option>
+          <option value="domestic">Domestic</option>
+          <option value="international">International</option>
+
+        </select>
+
+        <div class="text-danger" ng-if="c.errors.travel_type">
+          {{c.errors.travel_type}}
+        </div>
+      </div>
+
+
+      <!-- Short Description -->
+      <div class="form-group">
+        <label>Short Description <span class="text-danger">*</span></label>
+
+        <textarea
+          class="form-control"
+          rows="4"
+          maxlength="160"
+          ng-model="c.form.short_description"
+          placeholder="Enter travel details">
+        </textarea>
+
+        <div class="text-danger" ng-if="c.errors.short_description">
+          {{c.errors.short_description}}
+        </div>
+      </div>
+
+
+      <!-- Submit -->
+      <button
+        type="submit"
+        class="btn btn-primary"
+        ng-disabled="c.submitting">
+
+        {{c.submitting ? 'Submitting...' : 'Book Travel'}}
+
+      </button>
+
+
+      <!-- Success -->
+      <div
+        class="alert alert-success"
+        ng-if="c.success">
+
+        Travel booking created successfully.
+
+        <strong>{{c.bookingNumber}}</strong>
+
+      </div>
+
+
+      <!-- Server error -->
+      <div
+        class="alert alert-danger"
+        ng-if="c.serverError">
+
+        {{c.serverError}}
+
+      </div>
+
+    </form>
+
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

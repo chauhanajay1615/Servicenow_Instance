@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_policy_rule">
+    <sys_data_policy_rule action="INSERT_OR_UPDATE">
+        <disabled>ignore</disabled>
+        <field>startdate</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_data_policy_rule</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-04 06:41:16</sys_created_on>
+        <sys_data_policy display_value="Make StartDate Mandatory">c061d472c3078b10a97ff54d0501316b</sys_data_policy>
+        <sys_id>379110b2c3078b10a97ff54d050131a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>startdate</sys_name>
+        <sys_package display_value="Info travel Booking" source="x_2166443_info_t_0">95ed2831c3c38310a97ff54d05013196</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_update_name>sys_data_policy_rule_379110b2c3078b10a97ff54d050131a5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-04 06:41:16</sys_updated_on>
+        <table>x_2166443_info_t_0_travelbooking</table>
+    </sys_data_policy_rule>
+</record_update>

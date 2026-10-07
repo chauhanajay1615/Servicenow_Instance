@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl/>
+        <http_method>POST</http_method>
+        <name>getRecords_InfoTravelBooking</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    var body = request.body.data;
+
+    // -----------------------------
+    // Mandatory field validation
+    // -----------------------------
+
+    var mandatoryFields = [
+        "number",
+        "caller",
+        "from",
+        "destination",
+        "startdate",
+        "return",
+        "travel_type",
+        "short_description"
+    ];
+
+    for (var i = 0; i < mandatoryFields.length; i++) {
+
+        var field = mandatoryFields[i];
+
+        if (body[field] === undefined ||
+            body[field] === null ||
+            body[field].toString().trim() === "") {
+
+            response.setStatus(400);
+            return {
+                "status": "error",
+                "message": field + " is mandatory"
+            };
+        }
+    }
+
+
+    // -----------------------------
+    // Validate return field
+    // -----------------------------
+
+    if (typeof body.return !== "boolean") {
+
+        response.setStatus(400);
+        return {
+            "status": "error",
+            "message": "return must be true or false"
+        };
+    }
+
+
+    // -----------------------------
+    // If return = true
+    // returndate is mandatory
+    // -----------------------------
+
+    if (body.return === true) {
+
+        if (body.returndate === undefined ||
+            body.returndate === null ||
+            body.returndate.toString().trim() === "") {
+
+            response.setStatus(400);
+            return {
+                "status": "error",
+                "message": "returndate is mandatory when return is true"
+            };
+        }
+    }
+
+
+    // -----------------------------
+    // If return = false
+    // returndate should not be sent
+    // -----------------------------
+
+    if (body.return === false && body.returndate) {
+
+        response.setStatus(400);
+        return {
+            "status": "error",
+            "message": "Do not provide returndate when return is false"
+        };
+    }
+
+
+    // -----------------------------
+    // Validate travel type
+    // -----------------------------
+
+    var travelType = body.travel_type.toString().toLowerCase();
+
+    if (travelType !== "domestic" &&
+        travelType !== "international") {
+
+        response.setStatus(400);
+        return {
+            "status": "error",
+            "message": "travel_type must be domestic or international"
+        };
+    }
+
+
+    // -----------------------------
+    // International validation
+    // -----------------------------
+
+    if (travelType === "international") {
+
+        if (!body.passport_details ||
+            body.passport_details.toString().trim() === "") {
+
+            response.setStatus(400);
+            return {
+                "status": "error",
+                "message": "passport_details is mandatory for international travel"
+            };
+        }
+
+        if (!body.visa_details ||
+            body.visa_details.toString().trim() === "") {
+
+            response.setStatus(400);
+            return {
+                "status": "error",
+                "message": "visa_details is mandatory for international travel"
+            };
+        }
+    }
+
+
+    // -----------------------------
+    // Check duplicate number
+    // -----------------------------
+
+    var checkNumber = new GlideRecord(
+        "x_2166443_info_t_0_travelbooking"
+    );
+
+    checkNumber.addQuery("number", body.number);
+    checkNumber.query();
+
+    if (checkNumber.next()) {
+
+        response.setStatus(409);
+
+        return {
+            "status": "error",
+            "message": "Travel booking with this number already exists"
+        };
+    }
+
+
+    // -----------------------------
+    // Create record
+    // -----------------------------
+
+    var gr = new GlideRecord(
+        "x_2166443_info_t_0_travelbooking"
+    );
+
+    gr.initialize();
+
+    gr.number = body.number;
+    gr.caller = body.caller;
+    gr.from = body.from;
+    gr.destination = body.destination;
+    gr.startdate = body.startdate;
+    gr.return = body.return;
+    gr.travel_type = travelType;
+    gr.short_description = body.short_description;
+
+
+    // Return date only when return = true
+    if (body.return === true) {
+        gr.returndate = body.returndate;
+    }
+
+
+    // International fields
+    if (travelType === "international") {
+
+        gr.passport_details = body.passport_details;
+        gr.visa_details = body.visa_details;
+    }
+
+
+    // Insert record
+    var sysId = gr.insert();
+
+
+    // -----------------------------
+    // Insert failed
+    // -----------------------------
+
+    if (!sysId) {
+
+        response.setStatus(500);
+
+        return {
+            "status": "error",
+            "message": "Failed to create travel booking"
+        };
+    }
+
+
+    // -----------------------------
+    // Success response
+    // -----------------------------
+
+    response.setStatus(201);
+
+    return {
+        "status": "success",
+        "message": "Travel booking created successfully",
+        "sys_id": sysId,
+        "number": gr.getValue("number")
+    };
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_2166443_info_t_0/infotravelbooking/getRecord</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/getRecord</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-28 13:18:09</sys_created_on>
+        <sys_id>156d45eac3230310a97ff54d050131bf</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>getRecords_InfoTravelBooking</sys_name>
+        <sys_package display_value="Info travel Booking" source="x_2166443_info_t_0">95ed2831c3c38310a97ff54d05013196</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_update_name>sys_ws_operation_156d45eac3230310a97ff54d050131bf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-28 14:17:36</sys_updated_on>
+        <web_service_definition display_value="infoTravelbooking">da2d4d6ac3230310a97ff54d050131e1</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
+    <sc_cat_item_catalog action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="App Access Request">4c2ff987c3eb0710a97ff54d05013104</sc_cat_item>
+        <sc_catalog display_value="infoTravelBooking">bd95914fc3670710a97ff54d05013186</sc_catalog>
+        <sys_class_name>sc_cat_item_catalog</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-30 05:52:25</sys_created_on>
+        <sys_id>1edf350bc3eb0710a97ff54d05013194</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>infoTravelBooking.App Access Request</sys_name>
+        <sys_package display_value="Info travel Booking" source="x_2166443_info_t_0">95ed2831c3c38310a97ff54d05013196</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_update_name>sc_cat_item_catalog_1edf350bc3eb0710a97ff54d05013194</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-30 05:52:25</sys_updated_on>
+    </sc_cat_item_catalog>
+</record_update>

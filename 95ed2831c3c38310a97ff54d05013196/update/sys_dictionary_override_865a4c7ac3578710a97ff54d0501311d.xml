@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary_override">
+    <sys_dictionary_override action="INSERT_OR_UPDATE">
+        <attributes>ref_auto_completer=AJAXTableCompleter,ref_ac_columns=first_name;last_name,ref_ac_columns_search=true,ref_ac_display_value=false</attributes>
+        <attributes_override>true</attributes_override>
+        <base_table>task</base_table>
+        <calculation/>
+        <calculation_override>false</calculation_override>
+        <default_value/>
+        <default_value_override>false</default_value_override>
+        <dependent/>
+        <dependent_override>false</dependent_override>
+        <display_override>false</display_override>
+        <element>watch_list</element>
+        <mandatory>false</mandatory>
+        <mandatory_override>false</mandatory_override>
+        <name>x_2166443_info_t_0_travelbooking</name>
+        <read_only>false</read_only>
+        <read_only_override>false</read_only_override>
+        <reference_qual/>
+        <reference_qual_override>false</reference_qual_override>
+        <sys_class_name>sys_dictionary_override</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-16 16:27:57</sys_created_on>
+        <sys_id>865a4c7ac3578710a97ff54d0501311d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>watch_list</sys_name>
+        <sys_package display_value="Info travel Booking" source="x_2166443_info_t_0">95ed2831c3c38310a97ff54d05013196</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Info travel Booking">95ed2831c3c38310a97ff54d05013196</sys_scope>
+        <sys_update_name>sys_dictionary_override_865a4c7ac3578710a97ff54d0501311d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-16 16:27:57</sys_updated_on>
+    </sys_dictionary_override>
+</record_update>
